@@ -6,7 +6,17 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:12-stretch-build as build
 RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red \
        node-red-admin \
-       node-red-contrib-balena
+       node-red-contrib-balena \
+       node-red-dashboard \
+       node-red-contrib-bigtimer \
+       node-red-contrib-modbustcp \
+       node-red-contrib-persist \
+       node-red-contrib-bit \
+       node-red-contrib-ds18b20 \
+       node-red-node-pi-gpio \
+       node-red-contrib-lcd20x4-i2c \
+       node-red-node-email \
+       node-red-contrib-moment
 
 ###
 # Runtime image
