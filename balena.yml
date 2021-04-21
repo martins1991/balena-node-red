@@ -1,2 +1,18 @@
-applicationEnvironmentVariables:
-  - PORT: 80
+name: balena-node-red
+type: sw.application
+description: >-
+  Build a Node-RED application with balena-supervisor flow support that can be
+  managed remotely via balena publicURL.
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/martins1991/balena-node-red'
+data:
+  applicationEnvironmentVariables:
+    - PORTAL_SSID: balenaDash
+    - PORTAL_PASSPHRASE: balenaDash
+    - PORT: 1880
+    - USERNAME: "root"
+    - PASSWORD: "$2b$08$HfqMX3mqHWEJsT5V3KrKWO90awQ2louAVDZ/zwyI.WSxfHpA331de"
+  defaultDeviceType: "raspberrypi3-64"

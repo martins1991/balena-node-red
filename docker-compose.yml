@@ -1,14 +1,16 @@
 version: '2'
 volumes:
-    resin-data:
+  influxdb-data:
+  node-red-data:
 services:
   node-red:
     build: ./node-red
+    hostname: node-red
+    container_name: node-red
     volumes:
-      - 'resin-data:/data'
+      - 'node-red-data:/data'
     restart: always
     privileged: true
-    network_mode: host
     labels:
       io.balena.features.supervisor-api: '1'
     cap_add:
@@ -18,4 +20,20 @@ services:
       - "/dev/gpiomem:/dev/gpiomem"
       - "/dev/i2c-1:/dev/i2c-1"
     ports:
-      - 80:80
+      - "1880:1880"
+      - "502:502"
+  influxdb:
+    restart: always
+    hostname: influxdb
+    container_name: influxdb
+    build: ./influxdb
+    volumes:
+      - 'influxdb-data:/data'
+  wifi-connect:
+    build: ./wifi-connect
+    restart: always
+    network_mode: host
+    privileged: true
+    labels:
+      io.balena.features.dbus: '1'
+      io.balena.features.firmware: '1'
