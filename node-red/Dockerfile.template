@@ -16,7 +16,8 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-node-pi-gpio \
        node-red-contrib-lcd20x4-i2c \
        node-red-node-email \
-       node-red-contrib-moment
+       node-red-contrib-moment \
+       node-red-contrib-advanced-ping
 
 ###
 # Runtime image
