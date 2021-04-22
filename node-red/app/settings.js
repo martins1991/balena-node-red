@@ -64,7 +64,16 @@ module.exports = {
 
     // If you installed the optional node-red-dashboard you can set it's path
     // relative to httpRoot
-    ui: { path: "ui" },
+    ui: {
+        path: "ui",
+        middleware: function (req, res, next) {
+          if (['/icon64x64.png', '/icon120x120.png', '/icon192x192.png'].includes(req.url)) {
+            res.sendFile(path.resolve(path.join(__dirname, 'icons', req.url)))
+          } else {
+            next()
+          }
+       }
+    },
 
     // Securing Node-RED
     // -----------------
