@@ -75,6 +75,8 @@ module.exports = {
        }
     },
 
+    httpStatic: '/usr/src/app/assets/',
+
     // Securing Node-RED
     // -----------------
     // To password protect the Node-RED editor and admin API, the following
