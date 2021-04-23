@@ -23,7 +23,7 @@
     {
         "id": "55738979.61ad28",
         "type": "tab",
-        "label": "Zeitanzeige und Zeitschaltuhr",
+        "label": "Zeitschaltuhr",
         "disabled": false,
         "info": ""
     },
@@ -52,21 +52,14 @@
         "label": "MaxSystem"
     },
     {
-        "id": "f8c01ea3.d370b",
-        "type": "tab",
-        "label": "Systemzeit einstellen",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "7f14bf42.497b7",
+        "id": "47a4b7ac.24c1b8",
         "type": "tab",
         "label": "Influx Datenbank",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "7ce630b0.50a87",
+        "id": "7d3fe9f4.56f9b8",
         "type": "tab",
         "label": "Balena Interface",
         "disabled": false,
@@ -818,7 +811,7 @@
         "hostname": "influxdb",
         "port": "8086",
         "protocol": "http",
-        "database": "balena-sense",
+        "database": "heizopibase",
         "name": "internal influx database",
         "usetls": false,
         "tls": "d50d0c9f.31e858",
@@ -875,6 +868,31 @@
         "order": 2,
         "width": 2,
         "height": 1
+    },
+    {
+        "id": "a3d1cac0.d18028",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "4724197d.5d5118",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "feabd600.f71b28",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "fb98fdb9.b193a",
+        "order": 1,
+        "disp": false,
+        "width": "24",
+        "collapse": false
+    },
+    {
+        "id": "fb98fdb9.b193a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard"
     },
     {
         "id": "34b06bc0.587a94",
@@ -4405,48 +4423,6 @@
         "wires": []
     },
     {
-        "id": "613de019.45a4a",
-        "type": "ui_template",
-        "z": "21bad413.54339c",
-        "group": "a9f781c4.6ceca",
-        "name": "Beispiel Chart",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "format": "\n\t\t<title>chart created with amCharts | amCharts</title>\n\t\t<meta name=\"description\" content=\"chart created using amCharts live editor\" />\n\t\t\n\t\t<!-- amCharts javascript sources -->\n\t\t<script type=\"text/javascript\" src=\"https://www.amcharts.com/lib/3/amcharts.js\"></script>\n\t\t<script type=\"text/javascript\" src=\"https://www.amcharts.com/lib/3/serial.js\"></script>\n\t\t<script type=\"text/javascript\" src=\"https://www.amcharts.com/lib/3/themes/black.js\"></script>\n\t\t\n\n\t\t<!-- amCharts javascript code -->\n\t\t<script type=\"text/javascript\">\n\t\t\tAmCharts.makeChart(\"chartdiv\",\n\t\t\t\t{\n\t\"type\": \"serial\",\n\t\"categoryField\": \"date\",\n\t\"dataDateFormat\": \"YYYY-MM-DD HH:NN\",\n\t\"categoryAxis\": {\n\t\t\"minPeriod\": \"mm\",\n\t\t\"parseDates\": true\n\t},\n\t\"chartCursor\": {\n\t\t\"enabled\": true,\n\t\t\"categoryBalloonDateFormat\": \"JJ:NN\"\n\t},\n\t\"chartScrollbar\": {\n\t\t\"enabled\": true\n\t},\n\t\"trendLines\": [],\n\t\"graphs\": [\n\t\t{\n\t\t\t\"bullet\": \"round\",\n\t\t\t\"id\": \"AmGraph-1\",\n\t\t\t\"title\": \"graph 1\",\n\t\t\t\"valueField\": \"column-1\"\n\t\t},\n\t\t{\n\t\t\t\"bullet\": \"square\",\n\t\t\t\"id\": \"AmGraph-2\",\n\t\t\t\"title\": \"graph 2\",\n\t\t\t\"valueField\": \"column-2\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"AmGraph-3\",\n\t\t\t\"title\": \"graph 3\",\n\t\t\t\"valueField\": \"column-3\"\n\t\t}\n\t],\n\t\"guides\": [],\n\t\"valueAxes\": [\n\t\t{\n\t\t\t\"id\": \"ValueAxis-1\",\n\t\t\t\"title\": \"Axis title\"\n\t\t}\n\t],\n\t\"allLabels\": [],\n\t\"balloon\": {},\n\t\"legend\": {\n\t\t\"enabled\": true,\n\t\t\"useGraphSettings\": true\n\t},\n\t\"titles\": [\n\t\t{\n\t\t\t\"id\": \"Title-1\",\n\t\t\t\"size\": 15,\n\t\t\t\"text\": \"Chart Title\"\n\t\t}\n\t],\n\t\"dataProvider\": [\n\t\t{\n\t\t\t\"column-1\": 8,\n\t\t\t\"column-2\": 5,\n\t\t\t\"date\": \"2014-03-01 07:57\",\n\t\t\t\"column-3\": 20\n\t\t},\n\t\t{\n\t\t\t\"column-1\": 6,\n\t\t\t\"column-2\": 7,\n\t\t\t\"date\": \"2014-03-01 07:58\",\n\t\t\t\"column-3\": 24\n\t\t},\n\t\t{\n\t\t\t\"column-1\": 2,\n\t\t\t\"column-2\": 3,\n\t\t\t\"date\": \"2014-03-01 07:59\",\n\t\t\t\"column-3\": 70\n\t\t},\n\t\t{\n\t\t\t\"column-1\": 1,\n\t\t\t\"column-2\": 3,\n\t\t\t\"date\": \"2014-03-01 08:00\",\n\t\t\t\"column-3\": 75\n\t\t},\n\t\t{\n\t\t\t\"column-1\": 2,\n\t\t\t\"column-2\": 1,\n\t\t\t\"date\": \"2014-03-01 08:01\",\n\t\t\t\"column-3\": 79\n\t\t},\n\t\t{\n\t\t\t\"column-1\": 3,\n\t\t\t\"column-2\": 2,\n\t\t\t\"date\": \"2014-03-01 08:02\",\n\t\t\t\"column-3\": 42\n\t\t},\n\t\t{\n\t\t\t\"column-1\": 6,\n\t\t\t\"column-2\": 8,\n\t\t\t\"date\": \"2014-03-01 08:03\",\n\t\t\t\"column-3\": 44\n\t\t}\n\t]\n}\n\t\t\t);\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<div id=\"chartdiv\" style=\"width: 100%; height: 400px; background-color: #222222;\" ></div>\n\t</body>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1040,
-        "y": 1080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4f48bfbc.f3e97",
-        "type": "ui_button",
-        "z": "21bad413.54339c",
-        "name": "",
-        "group": "a9f781c4.6ceca",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "button",
-        "color": "",
-        "bgcolor": "",
-        "icon": "close",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "",
-        "x": 1010,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d4e9447.6a6afb8",
         "type": "ui_text",
         "z": "21bad413.54339c",
@@ -4460,23 +4436,6 @@
         "layout": "row-left",
         "x": 710,
         "y": 80,
-        "wires": []
-    },
-    {
-        "id": "decce339.b706a",
-        "type": "ui_toast",
-        "z": "21bad413.54339c",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "topic": "",
-        "name": "",
-        "x": 1050,
-        "y": 1120,
         "wires": []
     },
     {
@@ -5556,6 +5515,15 @@
         "type": "inject",
         "z": "e0c4c1fc.38ff7",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "60",
         "crontab": "",
         "once": true,
@@ -7828,8 +7796,8 @@
         "level": "0",
         "freq": "",
         "out": "out",
-        "x": 925,
-        "y": 180,
+        "x": 895,
+        "y": 90,
         "wires": []
     },
     {
@@ -7869,8 +7837,8 @@
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
-        "x": 280,
-        "y": 270,
+        "x": 250,
+        "y": 180,
         "wires": [
             [
                 "f1130a8c.892a58",
@@ -7909,8 +7877,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
-        "y": 405,
+        "x": 490,
+        "y": 315,
         "wires": [
             [
                 "d6a703b8.63c2c"
@@ -8023,8 +7991,8 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 700,
-        "y": 405,
+        "x": 670,
+        "y": 315,
         "wires": [
             [],
             [],
@@ -8084,8 +8052,8 @@
         "func": "if(msg.payload == \"1\"){\n    msg.payload = \"aktiv\";\n    return msg;\n}\nif(msg.payload == \"0\"){\n    msg.payload = \"nicht aktiv\";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 885,
-        "y": 270,
+        "x": 855,
+        "y": 180,
         "wires": [
             [
                 "7c304785.111488"
@@ -8100,8 +8068,8 @@
         "links": [
             "109077d3.d6bb88"
         ],
-        "x": 1005,
-        "y": 270,
+        "x": 975,
+        "y": 180,
         "wires": []
     },
     {
@@ -8112,8 +8080,8 @@
         "func": "if(msg.payload == \"off\"){\n    msg.payload = \"0\";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 515,
-        "y": 270,
+        "x": 485,
+        "y": 180,
         "wires": [
             [
                 "e777dae7.2314e8",
@@ -8144,8 +8112,8 @@
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
-        "x": 280,
-        "y": 180,
+        "x": 250,
+        "y": 90,
         "wires": [
             [
                 "e777dae7.2314e8",
@@ -8161,8 +8129,8 @@
         "func": "if(msg.payload == \"on\"){\n    msg.payload = \"Timer\";\n    return msg;\n}\nif(msg.payload == \"off\"){\n    msg.payload = \"Manuell\";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 505,
-        "y": 315,
+        "x": 475,
+        "y": 225,
         "wires": [
             [
                 "719190f4.871b7"
@@ -8181,8 +8149,8 @@
         "label": "Modus",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 700,
-        "y": 315,
+        "x": 670,
+        "y": 225,
         "wires": []
     },
     {
@@ -8213,8 +8181,8 @@
         "topic": "",
         "payload": "on",
         "payloadType": "str",
-        "x": 125,
-        "y": 270,
+        "x": 95,
+        "y": 180,
         "wires": [
             [
                 "6b640110.ed795"
@@ -8222,81 +8190,42 @@
         ]
     },
     {
-        "id": "f1aef51e.574b98",
-        "type": "exec",
-        "z": "f8c01ea3.d370b",
-        "command": "sudo date --set=\"14:30:00\"",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 410,
-        "y": 160,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "b53789e6.f89528",
-        "type": "inject",
-        "z": "f8c01ea3.d370b",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 160,
-        "wires": [
-            [
-                "f1aef51e.574b98"
-            ]
-        ]
-    },
-    {
-        "id": "355cad0d.7d6f62",
+        "id": "9c0f534d.8c113",
         "type": "debug",
-        "z": "7f14bf42.497b7",
+        "z": "47a4b7ac.24c1b8",
         "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 630,
-        "y": 460,
+        "x": 700,
+        "y": 615,
         "wires": []
     },
     {
-        "id": "2dcba286.8c9e9e",
+        "id": "ad90ec99.92bc4",
         "type": "influxdb in",
-        "z": "7f14bf42.497b7",
+        "z": "47a4b7ac.24c1b8",
         "influxdb": "eeb221fb.ab27f",
         "name": "read from internal influx database",
-        "query": "SELECT * from heizomat",
+        "query": "SELECT * from randomtest",
         "rawOutput": true,
         "precision": "",
         "retentionPolicy": "",
         "org": "my-org",
-        "x": 429,
-        "y": 334,
+        "x": 465,
+        "y": 545,
         "wires": [
             [
-                "355cad0d.7d6f62"
+                "9c0f534d.8c113"
             ]
         ]
     },
     {
-        "id": "7ebe56cc.d3eba8",
+        "id": "144fc04c.8c7f3",
         "type": "inject",
-        "z": "7f14bf42.497b7",
+        "z": "47a4b7ac.24c1b8",
         "name": "",
         "props": [
             {
@@ -8314,35 +8243,35 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 240,
+        "x": 210,
+        "y": 495,
         "wires": [
             [
-                "2dcba286.8c9e9e"
+                "ad90ec99.92bc4"
             ]
         ]
     },
     {
-        "id": "4c584c3f.0ecb54",
+        "id": "59ffc7c0.e77028",
         "type": "influxdb out",
-        "z": "7f14bf42.497b7",
+        "z": "47a4b7ac.24c1b8",
         "influxdb": "eeb221fb.ab27f",
         "name": "write to heizomat database",
-        "measurement": "heizomat",
+        "measurement": "randomtest",
         "precision": "",
         "retentionPolicy": "",
         "database": "",
         "retentionPolicyV18Flux": "",
         "org": "",
         "bucket": "",
-        "x": 700,
-        "y": 140,
+        "x": 675,
+        "y": 675,
         "wires": []
     },
     {
-        "id": "106b2a46.09e876",
+        "id": "6317985d.ec5a98",
         "type": "function",
-        "z": "7f14bf42.497b7",
+        "z": "47a4b7ac.24c1b8",
         "name": "single value",
         "func": "msg.payload = Math.random()*10;\nreturn msg;",
         "outputs": 1,
@@ -8350,18 +8279,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 140,
+        "x": 385,
+        "y": 675,
         "wires": [
             [
-                "4c584c3f.0ecb54"
+                "59ffc7c0.e77028"
             ]
         ]
     },
     {
-        "id": "16174c95.31f293",
+        "id": "8afc4360.9d06e",
         "type": "inject",
-        "z": "7f14bf42.497b7",
+        "z": "47a4b7ac.24c1b8",
         "name": "",
         "props": [
             {
@@ -8379,46 +8308,46 @@
         "topic": "testtopic",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
-        "y": 140,
+        "x": 145,
+        "y": 675,
         "wires": [
             [
-                "106b2a46.09e876"
+                "6317985d.ec5a98"
             ]
         ]
     },
     {
-        "id": "f8504cc8.10981",
+        "id": "2f9de58d.bcf6da",
         "type": "lock",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "name": "lock updates",
         "x": 490,
         "y": 220,
         "wires": [
             [
-                "640be215.69c27c",
-                "b50f2a9b.143648"
+                "a61a2cbf.322c8",
+                "89695157.2a356"
             ]
         ]
     },
     {
-        "id": "1c80f30a.b7551d",
+        "id": "d6eb96e7.3dd9c8",
         "type": "unlock",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "name": "unlock updates",
         "x": 500,
         "y": 300,
         "wires": [
             [
-                "1734abda.f4b664",
-                "b50f2a9b.143648"
+                "5b900457.677cac",
+                "89695157.2a356"
             ]
         ]
     },
     {
-        "id": "640be215.69c27c",
+        "id": "a61a2cbf.322c8",
         "type": "debug",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -8434,9 +8363,9 @@
         "l": false
     },
     {
-        "id": "1734abda.f4b664",
+        "id": "5b900457.677cac",
         "type": "debug",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -8451,9 +8380,9 @@
         "l": false
     },
     {
-        "id": "140decf2.7b1153",
+        "id": "5d6c3d42.6f6ab4",
         "type": "inject",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "name": "inital once",
         "props": [
             {
@@ -8475,14 +8404,14 @@
         "y": 180,
         "wires": [
             [
-                "f8504cc8.10981"
+                "2f9de58d.bcf6da"
             ]
         ]
     },
     {
-        "id": "c85c3ffb.19fb",
+        "id": "b6d10f60.a3992",
         "type": "ui_button",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "name": "lock updates",
         "group": "a68c46f7.1bdfe8",
         "order": 2,
@@ -8502,14 +8431,14 @@
         "y": 220,
         "wires": [
             [
-                "f8504cc8.10981"
+                "2f9de58d.bcf6da"
             ]
         ]
     },
     {
-        "id": "39184fbc.97f3f",
+        "id": "96df0cfb.2db74",
         "type": "ui_button",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "name": "unlock updates",
         "group": "a68c46f7.1bdfe8",
         "order": 2,
@@ -8529,14 +8458,14 @@
         "y": 300,
         "wires": [
             [
-                "1c80f30a.b7551d"
+                "d6eb96e7.3dd9c8"
             ]
         ]
     },
     {
-        "id": "b50f2a9b.143648",
+        "id": "2c856219.ea5dde",
         "type": "ui_text",
-        "z": "7ce630b0.50a87",
+        "z": "7d3fe9f4.56f9b8",
         "group": "a68c46f7.1bdfe8",
         "order": 2,
         "width": 0,
@@ -8545,40 +8474,15 @@
         "label": "Status",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 700,
-        "y": 260,
+        "x": 920,
+        "y": 255,
         "wires": []
     },
     {
-        "id": "35263928.b435f6",
-        "type": "moment",
-        "z": "55738979.61ad28",
-        "name": "",
-        "topic": "",
-        "input": "",
-        "inputType": "date",
-        "inTz": "Europe/London",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "DD.MM.YYYY hh:mm:ss",
-        "locale": "C",
-        "output": "",
-        "outputType": "msg",
-        "outTz": "Germany/Berlin",
-        "x": 340,
-        "y": 60,
-        "wires": [
-            [
-                "9b179c35.9920c"
-            ]
-        ]
-    },
-    {
-        "id": "6d421f5e.c7d5b",
+        "id": "80de1475.877148",
         "type": "inject",
-        "z": "55738979.61ad28",
-        "name": "actual time",
+        "z": "47a4b7ac.24c1b8",
+        "name": "every minute",
         "props": [
             {
                 "p": "payload"
@@ -8588,35 +8492,293 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1",
+        "repeat": "60",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 115,
-        "y": 60,
+        "x": 125,
+        "y": 240,
         "wires": [
             [
-                "35263928.b435f6"
+                "c7720347.9d21f",
+                "ee7491b6.73eda"
             ]
         ]
     },
     {
-        "id": "9b179c35.9920c",
+        "id": "e41e6c90.a67b7",
         "type": "ui_text",
-        "z": "55738979.61ad28",
-        "group": "c242bc7b.c1ea6",
+        "z": "47a4b7ac.24c1b8",
+        "group": "777dee3a.1a4ee",
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "time",
-        "label": "Aktuelle Zeit",
+        "name": "",
+        "label": "Uptime",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 545,
-        "y": 60,
+        "x": 495,
+        "y": 225,
+        "wires": []
+    },
+    {
+        "id": "c7720347.9d21f",
+        "type": "exec",
+        "z": "47a4b7ac.24c1b8",
+        "command": "uptime -p",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "oldrc": false,
+        "name": "Laufzeit",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "e41e6c90.a67b7"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bbd32f31.c2cf9",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "every minute",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 125,
+        "y": 75,
+        "wires": [
+            [
+                "13a614c5.94b68b"
+            ]
+        ]
+    },
+    {
+        "id": "ca212d6d.365d9",
+        "type": "ui_text",
+        "z": "47a4b7ac.24c1b8",
+        "group": "4724197d.5d5118",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Erreichbarkeit",
+        "format": "{{msg.payload}} ms",
+        "layout": "row-spread",
+        "x": 515,
+        "y": 75,
+        "wires": []
+    },
+    {
+        "id": "13a614c5.94b68b",
+        "type": "adv ping",
+        "z": "47a4b7ac.24c1b8",
+        "name": "ping heizomat",
+        "host": "192.168.0.10",
+        "x": 320,
+        "y": 75,
+        "wires": [
+            [
+                "ca212d6d.365d9",
+                "8ce81bf7.7feba8"
+            ]
+        ]
+    },
+    {
+        "id": "64c85d7b.3947c4",
+        "type": "influxdb out",
+        "z": "47a4b7ac.24c1b8",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "write to heizomat database",
+        "measurement": "ping_heizomat",
+        "precision": "m",
+        "retentionPolicy": "",
+        "database": "",
+        "retentionPolicyV18Flux": "",
+        "org": "",
+        "bucket": "",
+        "x": 645,
+        "y": 165,
+        "wires": []
+    },
+    {
+        "id": "8ce81bf7.7feba8",
+        "type": "function",
+        "z": "47a4b7ac.24c1b8",
+        "name": "to int",
+        "func": "if(msg.payload == false){\n    msg.payload = -1.0;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 485,
+        "y": 120,
+        "wires": [
+            [
+                "64c85d7b.3947c4"
+            ]
+        ]
+    },
+    {
+        "id": "27993fa0.4a81",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "-------------   Test --------------",
+        "info": "",
+        "x": 165,
+        "y": 450,
+        "wires": []
+    },
+    {
+        "id": "f96204a4.2d88e8",
+        "type": "device",
+        "z": "7d3fe9f4.56f9b8",
+        "name": "device state",
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "408a5458.12255c"
+            ]
+        ]
+    },
+    {
+        "id": "92413299.e28c9",
+        "type": "inject",
+        "z": "7d3fe9f4.56f9b8",
+        "name": "inital once",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 295,
+        "y": 420,
+        "wires": [
+            [
+                "f96204a4.2d88e8"
+            ]
+        ]
+    },
+    {
+        "id": "408a5458.12255c",
+        "type": "debug",
+        "z": "7d3fe9f4.56f9b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 420,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "89695157.2a356",
+        "type": "function",
+        "z": "7d3fe9f4.56f9b8",
+        "name": "filter false overrides",
+        "func": "if(msg.payload == false){\n    return null;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 735,
+        "y": 255,
+        "wires": [
+            [
+                "2c856219.ea5dde"
+            ]
+        ]
+    },
+    {
+        "id": "42b8d6d1.fc68e8",
+        "type": "ui_template",
+        "z": "21bad413.54339c",
+        "group": "feabd600.f71b28",
+        "name": "Logo / Clock",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<script id=\"clockScript1\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        //add logo\n        var div1 = $('<div/>');\n        var logo = new Image();\n\n        logo.src = '/logo.png'\n        logo.height = 45;\n        div1[0].style.margin = '10px auto';\n\n        div1.append(logo);\n\n        //add clock\n        var div2 = $('<div/>');\n        var p = $('<p/>');\n\n        div2.append(p);\n        div2[0].style.margin = '5px';\n\n        function displayTime() {\n            p.text(new Date().toLocaleString());\n        }\n        \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div2);\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 100);\n    });\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "x": 205,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee7491b6.73eda",
+        "type": "is online",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "url": "",
+        "action": "0",
+        "x": 300,
+        "y": 330,
+        "wires": [
+            [
+                "b767c1e6.6d19c"
+            ]
+        ]
+    },
+    {
+        "id": "b767c1e6.6d19c",
+        "type": "influxdb out",
+        "z": "47a4b7ac.24c1b8",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "write to heizomat database",
+        "measurement": "online",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "retentionPolicyV18Flux": "",
+        "org": "",
+        "bucket": "",
+        "x": 645,
+        "y": 330,
         "wires": []
     }
 ]
