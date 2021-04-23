@@ -68,7 +68,7 @@ module.exports = {
         path: "ui",
         middleware: function (req, res, next) {
           if (['/icon64x64.png', '/icon120x120.png', '/icon192x192.png'].includes(req.url)) {
-            res.sendFile(path.resolve(path.join(__dirname, 'icons', req.url)))
+            res.sendFile(path.resolve(path.join('/usr/src/app/assets', req.url)))
           } else {
             next()
           }
