@@ -18,7 +18,8 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red-node-email \
        node-red-contrib-moment \
        node-red-contrib-advanced-ping \
-       node-red-contrib-influxdb
+       node-red-contrib-influxdb \
+       npm install node-red-contrib-isonline
 
 ###
 # Runtime image
