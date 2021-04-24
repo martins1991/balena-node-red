@@ -30,7 +30,7 @@ services:
     volumes:
       - 'influxdb-data:/data'
     environment:
-      INFLUXDB_DB=heizopibase
+        - 'INFLUXDB_DB=heizopidb'
   grafana:
     restart: always
     hostname: grafana
