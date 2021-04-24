@@ -15,4 +15,6 @@ RUN /usr/src/app/download.sh "%%BALENA_ARCH%%"
 
 RUN dpkg -i /tmp/grafana.deb && rm /tmp/grafana.deb
 
+RUN grafana-cli plugins install flant-statusmap-panel
+
 CMD ["/bin/sh","/usr/src/app/entry.sh"]
