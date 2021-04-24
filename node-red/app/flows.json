@@ -66,6 +66,13 @@
         "info": ""
     },
     {
+        "id": "37e86829.abd148",
+        "type": "tab",
+        "label": "Persistent Test",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "737b53c.beec9ac",
         "type": "subflow",
         "name": "generiere Meldungen aus Register 0",
@@ -92,9 +99,21 @@
                         "port": 0
                     }
                 ]
+            },
+            {
+                "x": 360,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "d453b9d1.bddac8",
+                        "port": 0
+                    }
+                ]
             }
         ],
-        "env": []
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "9db9eb2b.663108",
@@ -119,6 +138,16 @@
                 "wires": [
                     {
                         "id": "2230cbb.37bb434",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 300,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "a9ca8a35.db8108",
                         "port": 0
                     }
                 ]
@@ -151,6 +180,16 @@
                         "port": 0
                     }
                 ]
+            },
+            {
+                "x": 300,
+                "y": 20,
+                "wires": [
+                    {
+                        "id": "465f2e78.45e7b",
+                        "port": 0
+                    }
+                ]
             }
         ]
     },
@@ -177,6 +216,16 @@
                 "wires": [
                     {
                         "id": "75ad93a3.056f4c",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 320,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "b7c916b1.01c138",
                         "port": 0
                     }
                 ]
@@ -209,6 +258,16 @@
                         "port": 0
                     }
                 ]
+            },
+            {
+                "x": 320,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "98cdccd3.1e4c1",
+                        "port": 0
+                    }
+                ]
             }
         ]
     },
@@ -235,6 +294,16 @@
                 "wires": [
                     {
                         "id": "9e0446e0.375a68",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "272d4c11.2bd654",
                         "port": 0
                     }
                 ]
@@ -267,6 +336,16 @@
                         "port": 0
                     }
                 ]
+            },
+            {
+                "x": 320,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "19f3754d.0d616b",
+                        "port": 0
+                    }
+                ]
             }
         ]
     },
@@ -296,6 +375,16 @@
                         "port": 0
                     }
                 ]
+            },
+            {
+                "x": 300,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "3546e7c.113c218",
+                        "port": 0
+                    }
+                ]
             }
         ]
     },
@@ -304,6 +393,7 @@
         "type": "subflow",
         "name": "generiere Meldungen aus Register 8",
         "info": "Register 8: Betriebsart",
+        "category": "",
         "in": [
             {
                 "x": 60,
@@ -341,8 +431,21 @@
                         "port": 0
                     }
                 ]
+            },
+            {
+                "x": 420,
+                "y": 20,
+                "wires": [
+                    {
+                        "id": "5e296089.bec47",
+                        "port": 0
+                    }
+                ]
             }
-        ]
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "6e8689b8.28b028",
@@ -455,6 +558,16 @@
                     },
                     {
                         "id": "7b6c82f2.9babb4",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 320,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "4b9be42e.81ecfc",
                         "port": 0
                     }
                 ]
@@ -635,15 +748,6 @@
         }
     },
     {
-        "id": "a9f781c4.6ceca",
-        "type": "ui_group",
-        "name": "TCP Communication",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": "12"
-    },
-    {
         "id": "c242bc7b.c1ea6",
         "type": "ui_group",
         "name": "Settings",
@@ -736,82 +840,12 @@
         "collapse": false
     },
     {
-        "id": "a8bcfa58.4a2f78",
-        "type": "ui_group",
-        "z": "55738979.61ad28",
-        "name": "Schedule",
-        "tab": "",
-        "order": 1,
-        "disp": false,
-        "width": "6"
-    },
-    {
-        "id": "21b31440.1b29cc",
-        "type": "ui_group",
-        "name": "Timer Status",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "5",
-        "collapse": false
-    },
-    {
-        "id": "89624b.069e4db8",
-        "type": "ui_group",
-        "name": "Set the Time",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": "5",
-        "collapse": false
-    },
-    {
-        "id": "a3774d04.f6e08",
-        "type": "ui_group",
-        "name": "Current Date & Time",
-        "tab": "",
-        "order": 5,
-        "disp": true,
-        "width": "5",
-        "collapse": false
-    },
-    {
-        "id": "b23c952.b04bc68",
-        "type": "ui_group",
-        "name": "Messages",
-        "tab": "",
-        "order": 6,
-        "disp": true,
-        "width": "5",
-        "collapse": false
-    },
-    {
-        "id": "1f1864bd.7ab0db",
-        "type": "ui_group",
-        "name": "Evening",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "d835f7a1.e3b7d8",
-        "type": "ui_group",
-        "name": "Garden: Watering",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "eeb221fb.ab27f",
         "type": "influxdb",
         "hostname": "influxdb",
         "port": "8086",
         "protocol": "http",
-        "database": "heizopibase",
+        "database": "heizopidb",
         "name": "internal influx database",
         "usetls": false,
         "tls": "d50d0c9f.31e858",
@@ -843,15 +877,6 @@
         "collapse": false
     },
     {
-        "id": "1ba71a52.402c76",
-        "type": "ui_group",
-        "name": "Group 2",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": 6
-    },
-    {
         "id": "6f9f0c7.86d41f4",
         "type": "ui_tab",
         "name": "Einstellungen",
@@ -861,20 +886,11 @@
         "hidden": false
     },
     {
-        "id": "5d3552f8.589ebc",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "777dee3a.1a4ee",
-        "order": 2,
-        "width": 2,
-        "height": 1
-    },
-    {
         "id": "a3d1cac0.d18028",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "4724197d.5d5118",
-        "order": 3,
+        "order": 4,
         "width": 1,
         "height": 1
     },
@@ -893,6 +909,12 @@
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard"
+    },
+    {
+        "id": "36d947d4.eacfd8",
+        "type": "persist-store",
+        "filename": "/data/HeizoPi/parameter.json",
+        "interval": "60"
     },
     {
         "id": "34b06bc0.587a94",
@@ -954,6 +976,9 @@
         "func": "if (msg.payload === true){\n    msg.payload = \"Motorschutz Fräser\";\n    return msg;\n}\nelse{\n    msg.payload = \"\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 640,
         "y": 40,
         "wires": [
@@ -2827,6 +2852,9 @@
         "func": "if (msg.payload === 0){\n    msg.payload = \"Wartung\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 460,
         "y": 80,
         "wires": [
@@ -2841,6 +2869,9 @@
         "func": "if (msg.payload === 1){\n    msg.payload = \"Dauerbetrieb\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 470,
         "y": 120,
         "wires": [
@@ -2855,6 +2886,9 @@
         "func": "if (msg.payload === 2){\n    msg.payload = \"Zündbetrieb\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 470,
         "y": 160,
         "wires": [
@@ -2869,6 +2903,9 @@
         "func": "if (msg.payload === 3){\n    msg.payload = \"Boilerbetrieb\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 470,
         "y": 200,
         "wires": [
@@ -2907,6 +2944,9 @@
         "func": "if (msg.payload === 0){\n    msg.payload = \"Wartung\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 20,
         "wires": [
@@ -2921,6 +2961,9 @@
         "func": "if (msg.payload === 1){\n    msg.payload = \"Start\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 470,
         "y": 60,
         "wires": [
@@ -2935,6 +2978,9 @@
         "func": "if (msg.payload === 2){\n    msg.payload = \"Ende Start\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 490,
         "y": 100,
         "wires": [
@@ -2949,6 +2995,9 @@
         "func": "if (msg.payload === 10){\n    msg.payload = \"Hand Zünden\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 500,
         "y": 140,
         "wires": [
@@ -2963,6 +3012,9 @@
         "func": "if (msg.payload === 12){\n    msg.payload = \"Start Zündung\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 500,
         "y": 180,
         "wires": [
@@ -2977,6 +3029,9 @@
         "func": "if (msg.payload === 13){\n    msg.payload = \"Zündeinschub\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 500,
         "y": 220,
         "wires": [
@@ -3360,6 +3415,9 @@
         "func": "var newMsg = {topic: \"Fehler 1\", payload: msg.payload[0]};\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 200,
         "y": 280,
         "wires": [
@@ -3488,6 +3546,9 @@
         "func": "var newMsg = {topic: \"Betriebsart\", payload: msg.payload[8]};\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 200,
         "y": 160,
         "wires": [
@@ -3508,6 +3569,9 @@
         "func": "var newMsg = {topic: \"Betriebszustand\", payload: msg.payload[9]};\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 180,
         "y": 440,
         "wires": [
@@ -3575,9 +3639,19 @@
         "type": "inject",
         "z": "148e244.a6e71dc",
         "name": "Daily backup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "01 00 * * *",
         "once": false,
+        "onceDelay": "",
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -3597,6 +3671,9 @@
         "func": "var globallist = \"PuffertemperaturMin;PuffertemperaturMax;BoilertemperaturMin;BoilertemperaturEmail;BoilertemperaturMax;KesseltemperaturMin;KesseltemperaturMax;Kesseltemperatur;KesseltemperaturEmail;SolltemperaturKessel;Mailadressen;KesseltemperaturZuHoch;KesseltemperaturZuNiedrig\";\nvar liste = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<liste.length; i++){\n    outputs.push({key : liste[i], type: typeof global.get(liste[i]), value: global.get(liste[i])});\n}\n\nmsg.payload = outputs;\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 430,
         "y": 80,
         "wires": [
@@ -3625,12 +3702,12 @@
         "id": "3e60b85a.287f88",
         "type": "file",
         "z": "148e244.a6e71dc",
-        "name": "/home/pi/HeizoPi/Betriebsparameter.json",
-        "filename": "/home/pi/HeizoPi/Betriebsparameter.json",
+        "name": "/data/HeizoPi/Betriebsparameter.json",
+        "filename": "/data/HeizoPi/Betriebsparameter.json",
         "appendNewline": true,
         "createDir": true,
         "overwriteFile": "true",
-        "x": 940,
+        "x": 930,
         "y": 80,
         "wires": [
             []
@@ -3680,10 +3757,10 @@
         "id": "c5a8cc68.28f9c",
         "type": "file in",
         "z": "148e244.a6e71dc",
-        "name": "/home/pi/HeizoPi/Betriebsparameter.json",
-        "filename": "/home/pi/HeizoPi/Betriebsparameter.json",
+        "name": "/data/HeizoPi/Betriebsparameter.json",
+        "filename": "/data/HeizoPi/Betriebsparameter.json",
         "format": "utf8",
-        "x": 420,
+        "x": 410,
         "y": 240,
         "wires": [
             [
@@ -3898,12 +3975,14 @@
         "type": "debug",
         "z": "ae740e.b407ebf",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": true,
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
         "x": 930,
         "y": 320,
         "wires": []
@@ -4039,10 +4118,15 @@
         "func": "global.set(\"Puffertemperatur\",msg.payload);",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 220,
         "wires": [
-            []
+            [
+                "43129e8d.bd88b"
+            ]
         ]
     },
     {
@@ -4427,7 +4511,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "777dee3a.1a4ee",
-        "order": 6,
+        "order": 8,
         "width": 0,
         "height": 0,
         "name": "Status Pufferpumpe",
@@ -4498,6 +4582,9 @@
         "func": "if(msg.payload == \"0\"){\n    msg.payload = \"nicht aktiv\";\n    return msg;\n}\nif(msg.payload == \"1\"){\n    msg.payload = \"aktiv\";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 940,
         "y": 420,
         "wires": [
@@ -4569,6 +4656,15 @@
         "type": "inject",
         "z": "ae740e.b407ebf",
         "name": "Kesseltemperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "10",
         "crontab": "",
         "once": false,
@@ -5059,7 +5155,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "777dee3a.1a4ee",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 1,
         "name": "Pufferpumpenfreigabe",
@@ -5088,6 +5184,9 @@
         "func": "//get global variables\n//Puffertemperatur\nvar Puffertemperatur = msg.payload;\nvar PuffertemperaturMin = global.get(\"PuffertemperaturMin\");\nvar PuffertemperaturMax = global.get(\"PuffertemperaturMax\");\nvar Kesseltemperatur = global.get(\"Kesseltemperatur\");\n//flags\nvar KesseltemperaturZuNiedrig = global.get(\"KesseltemperaturZuNiedrig\");\nvar KesseltemperaturZuHoch = global.get(\"KesseltemperaturZuHoch\");\n\n//Prozessgrenzen (Kesseltemperatur) prüfen\nif(KesseltemperaturZuNiedrig)\n{\n    var msg = [{ topic: \"Pufferpumpe\", payload: 0 } , { topic: \"Info\", payload: \"Kesseltemperatur ist kleiner als Minimum! Pufferpumpe gesperrt\" }];\n    context.set(\"Pufferpumpe\",false);\n    return msg;\n}\nelse if (KesseltemperaturZuHoch)\n{\n    var msg = [{ topic: \"Pufferpumpe\", payload: 1 } , { topic: \"Info\", payload: \"Kesseltemperatur ist größer als Maximum! Pufferpumpe muss laufen\" }];\n    context.set(\"Pufferpumpe\",true);\n    return msg;\n}\n//Prozessgrenzen (Puffertemperatur) prüfen\nelse if(Puffertemperatur <= PuffertemperaturMin)\n{\n    if(Puffertemperatur >= Kesseltemperatur)\n    {\n        var msg = [{ topic: \"Pufferpumpe\", payload: 0 } , { topic: \"Info\", payload: \"Puffertemperatur ist kleiner als Minimum! Kesseltemperatur ist aber kleiner als Puffertemperatur! Pufferpumpe aus\" }];\n        context.set(\"Pufferpumpe\",false);\n        return msg;\n    }\n    else\n    {\n        var msg = [{ topic: \"Pufferpumpe\", payload: 1 } , { topic: \"Info\", payload: \"Puffertemperatur ist kleiner als Minimum! Pufferpumpe an\" }];\n        context.set(\"Pufferpumpe\",true);\n        return msg;\n    }\n}\nelse if(Puffertemperatur >= PuffertemperaturMax)\n{\n    var msg = [{ topic: \"Pufferpumpe\", payload: 0 } , { topic: \"Info\", payload: \"Puffertemperatur hat Maximum erreicht! Pufferpumpe aus\" }];\n    context.set(\"Pufferpumpe\",false);\n    return msg;\n}\nelse\n{\n    var msg = [null , { topic: \"Info\", payload: \"Kein Eingriff in den Pufferprozess nötig\" }];\n    return msg;\n}",
         "outputs": "2",
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 510,
         "y": 260,
         "wires": [
@@ -5129,7 +5228,9 @@
         "x": 480,
         "y": 440,
         "wires": [
-            []
+            [
+                "ece797e.d48af68"
+            ]
         ]
     },
     {
@@ -5151,7 +5252,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "777dee3a.1a4ee",
-        "order": 7,
+        "order": 9,
         "width": 0,
         "height": 0,
         "name": "Status Boilerpumpe",
@@ -5426,7 +5527,7 @@
         "payload": "20",
         "payloadType": "num",
         "x": 210,
-        "y": 380,
+        "y": 460,
         "wires": [
             [
                 "ef8c70a.fa1d99"
@@ -5442,7 +5543,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 440,
-        "y": 380,
+        "y": 460,
         "wires": [
             []
         ]
@@ -5605,6 +5706,9 @@
         "func": "global.set(\"HeizomatFehler\",msg.payload);",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 470,
         "y": 580,
         "wires": [
@@ -5760,8 +5864,7 @@
                 "6f64ea1c.f5da74",
                 "bbb2365.b5c7ec8",
                 "73074430.3e772c",
-                "d4224f59.68065",
-                "f3fd5f85.434f48"
+                "d4224f59.68065"
             ]
         ]
     },
@@ -5773,11 +5876,16 @@
         "func": "global.set(\"Kesseltemperatur\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 800,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
         "y": 600,
         "wires": [
             [
-                "23d2964c.8b904a"
+                "23d2964c.8b904a",
+                "eb6aa23e.2e85d",
+                "67e813de.194eac"
             ]
         ]
     },
@@ -5793,6 +5901,9 @@
             [
                 "8c7f54fa.b3ad58",
                 "c0ba9678.1879d8"
+            ],
+            [
+                "ae4bd510.6c6da8"
             ]
         ]
     },
@@ -5801,11 +5912,15 @@
         "type": "subflow:9db9eb2b.663108",
         "z": "bd9ba20.0ae4f6",
         "name": "Register 1: Fehler 2",
+        "env": [],
         "x": 430,
         "y": 200,
         "wires": [
             [
                 "8c7f54fa.b3ad58"
+            ],
+            [
+                "2a6a7b89.c09374"
             ]
         ]
     },
@@ -5820,6 +5935,9 @@
         "wires": [
             [
                 "8c7f54fa.b3ad58"
+            ],
+            [
+                "70b7b18c.dee35"
             ]
         ]
     },
@@ -5834,6 +5952,9 @@
         "wires": [
             [
                 "8c7f54fa.b3ad58"
+            ],
+            [
+                "fc0e3b06.9bab58"
             ]
         ]
     },
@@ -5845,6 +5966,9 @@
         "func": "var newMsg = {topic: \"Kesseltemperatur\", payload: msg.payload[11]};\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 600,
         "wires": [
@@ -5873,8 +5997,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 930,
-        "y": 240,
+        "x": 910,
+        "y": 80,
         "wires": [
             [
                 "8a24b003.e4453"
@@ -5886,11 +6010,15 @@
         "type": "subflow:e1d0a68b.c9f2b8",
         "z": "bd9ba20.0ae4f6",
         "name": "Register 4: Warnungen mit Quittierpflicht",
+        "env": [],
         "x": 500,
         "y": 320,
         "wires": [
             [
                 "8c7f54fa.b3ad58"
+            ],
+            [
+                "53906a16.e01094"
             ]
         ]
     },
@@ -5899,10 +6027,14 @@
         "type": "subflow:f4ec8914.143978",
         "z": "bd9ba20.0ae4f6",
         "name": "Register 6: Gebläse Warnungen (Primär 3, Sekundär 1)",
+        "env": [],
         "x": 550,
         "y": 400,
         "wires": [
-            []
+            [],
+            [
+                "bed346df.38fdc8"
+            ]
         ]
     },
     {
@@ -5910,10 +6042,14 @@
         "type": "subflow:199a6f88.8507e",
         "z": "bd9ba20.0ae4f6",
         "name": "Register 5: Gebläse Warnungen (Primär 1, Primär 2)",
+        "env": [],
         "x": 540,
         "y": 360,
         "wires": [
-            []
+            [],
+            [
+                "d93eda1d.5507e8"
+            ]
         ]
     },
     {
@@ -5927,6 +6063,9 @@
         "wires": [
             [
                 "fe502119.8059"
+            ],
+            [
+                "ac38ccb8.6a618"
             ]
         ]
     },
@@ -5935,10 +6074,14 @@
         "type": "subflow:59b0243e.df118c",
         "z": "bd9ba20.0ae4f6",
         "name": "Register 7: Gebläse Warnungen (Sekundär 2, Rauchgasgebläse)",
+        "env": [],
         "x": 580,
         "y": 440,
         "wires": [
-            []
+            [],
+            [
+                "4ddd066b.2beb18"
+            ]
         ]
     },
     {
@@ -5951,8 +6094,10 @@
         "y": 520,
         "wires": [
             [
-                "847c7d9e.40808",
-                "f3fd5f85.434f48"
+                "847c7d9e.40808"
+            ],
+            [
+                "c68b7885.d37d08"
             ]
         ]
     },
@@ -5964,10 +6109,15 @@
         "func": "var newMsg = {topic: \"LeistungLastbetrieb\", payload: msg.payload[10]};\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 490,
         "y": 560,
         "wires": [
-            []
+            [
+                "ef9ae015.74ab7"
+            ]
         ]
     },
     {
@@ -5978,6 +6128,9 @@
         "func": "var newMsg = {topic: \"Abgastemperatur\", payload: msg.payload[12]};\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 640,
         "wires": [
@@ -6023,7 +6176,9 @@
         "x": 470,
         "y": 760,
         "wires": [
-            []
+            [
+                "d8114a50.9576e8"
+            ]
         ]
     },
     {
@@ -6227,6 +6382,7 @@
         "type": "subflow:4b7d5346.6c757c",
         "z": "bd9ba20.0ae4f6",
         "name": "Register 30: Gebläse Warnungen (Rauchgasgebläse 2)",
+        "env": [],
         "x": 550,
         "y": 1360,
         "wires": [
@@ -6243,8 +6399,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 950,
-        "y": 160,
+        "x": 930,
+        "y": 120,
         "wires": []
     },
     {
@@ -6256,8 +6412,8 @@
             "1bdd4ad2.ac2505",
             "a0969cfb.220f6"
         ],
-        "x": 1235,
-        "y": 240,
+        "x": 1095,
+        "y": 80,
         "wires": []
     },
     {
@@ -6269,7 +6425,7 @@
             "4250ed24.0e0574",
             "a00554d2.feabc8"
         ],
-        "x": 975,
+        "x": 635,
         "y": 520,
         "wires": []
     },
@@ -6281,11 +6437,15 @@
         "func": "global.set(\"PuffertemperaturMin\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 890,
         "y": 640,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "bb713ba.687c3c8"
             ]
         ]
     },
@@ -6297,11 +6457,15 @@
         "func": "global.set(\"PuffertemperaturMax\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 890,
         "y": 600,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "e108061d.f0f318"
             ]
         ]
     },
@@ -6362,11 +6526,15 @@
         "func": "global.set(\"BoilertemperaturMin\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 890,
         "y": 760,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "2f25640.2d0f39c"
             ]
         ]
     },
@@ -6378,11 +6546,15 @@
         "func": "global.set(\"BoilertemperaturMax\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 890,
         "y": 720,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "b419de09.7b696"
             ]
         ]
     },
@@ -6565,11 +6737,15 @@
         "func": "global.set(\"KesseltemperaturMin\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 890,
         "y": 920,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "2f01d337.78e2ac"
             ]
         ]
     },
@@ -6581,11 +6757,15 @@
         "func": "global.set(\"KesseltemperaturMax\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 890,
         "y": 880,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "1e91f53c.de7f6b"
             ]
         ]
     },
@@ -6909,7 +7089,7 @@
             "9d2185c4.b706a8"
         ],
         "x": 1155,
-        "y": 720,
+        "y": 800,
         "wires": []
     },
     {
@@ -6958,7 +7138,7 @@
         "links": [
             "e232fec9.98fcd"
         ],
-        "x": 975,
+        "x": 635,
         "y": 480,
         "wires": []
     },
@@ -6983,7 +7163,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "4724197d.5d5118",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "Betriebsart",
@@ -7009,7 +7189,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "4724197d.5d5118",
-        "order": 5,
+        "order": 7,
         "width": 0,
         "height": 0,
         "name": "",
@@ -7054,7 +7234,7 @@
         "links": [
             "3fffbf68.43ee5"
         ],
-        "x": 975,
+        "x": 1175,
         "y": 600,
         "wires": []
     },
@@ -7064,7 +7244,7 @@
         "z": "21bad413.54339c",
         "name": "chartKesselTemperatur",
         "group": "4724197d.5d5118",
-        "order": 2,
+        "order": 3,
         "width": 5,
         "height": 3,
         "label": "Kesseltemperatur",
@@ -7104,7 +7284,7 @@
         "z": "21bad413.54339c",
         "name": "Kesseltemperatur",
         "group": "4724197d.5d5118",
-        "order": 1,
+        "order": 2,
         "width": 3,
         "height": 3,
         "gtype": "gage",
@@ -7180,7 +7360,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "777dee3a.1a4ee",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "Status Boiler Pumpe",
@@ -7196,7 +7376,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "777dee3a.1a4ee",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "Status Puffer Pumpe",
@@ -7248,7 +7428,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "4724197d.5d5118",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "Fehler+Warnungen",
@@ -7433,7 +7613,7 @@
             "4edc5740.95cd78"
         ],
         "x": 155,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "71316e40.cf2d6"
@@ -7458,7 +7638,7 @@
         "max": "80",
         "step": 1,
         "x": 330,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "a284e72d.3edcf8"
@@ -7473,11 +7653,15 @@
         "func": "global.set(\"BoilertemperaturEmail\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 610,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "9f9a3104.39457"
             ]
         ]
     },
@@ -7512,11 +7696,15 @@
         "func": "global.set(\"Mailadressen\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 710,
         "y": 1160,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "56c7e56c.bbd01c"
             ]
         ]
     },
@@ -7526,8 +7714,8 @@
         "z": "21bad413.54339c",
         "name": "Email Benachrichtigung",
         "info": "",
-        "x": 260,
-        "y": 1120,
+        "x": 240,
+        "y": 1000,
         "wires": []
     },
     {
@@ -7556,7 +7744,7 @@
             "79de22cd.90fdec"
         ],
         "x": 155,
-        "y": 1060,
+        "y": 1100,
         "wires": [
             [
                 "17777aff.0d4635"
@@ -7581,7 +7769,7 @@
         "max": "80",
         "step": 1,
         "x": 330,
-        "y": 1060,
+        "y": 1100,
         "wires": [
             [
                 "233d0fa7.0c989"
@@ -7596,11 +7784,15 @@
         "func": "global.set(\"KesseltemperaturEmail\",msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 620,
-        "y": 1060,
+        "y": 1100,
         "wires": [
             [
-                "22d2596b.9cb846"
+                "22d2596b.9cb846",
+                "fce00fa9.0d5"
             ]
         ]
     },
@@ -7658,32 +7850,6 @@
         ]
     },
     {
-        "id": "4deefe20.128ba",
-        "type": "join",
-        "z": "bd9ba20.0ae4f6",
-        "name": "",
-        "mode": "custom",
-        "build": "string",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "1",
-        "count": "",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 930,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c98f2ef2.8a934",
         "type": "status",
         "z": "bd9ba20.0ae4f6",
@@ -7709,8 +7875,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 90,
-        "y": 560,
+        "x": 150,
+        "y": 380,
         "wires": []
     },
     {
@@ -7749,6 +7915,9 @@
         "func": "if(msg.payload !== \"\") return msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 270,
         "y": 700,
         "wires": [
@@ -7757,20 +7926,6 @@
                 "d3d50692.a613b8"
             ]
         ]
-    },
-    {
-        "id": "f3fd5f85.434f48",
-        "type": "debug",
-        "z": "bd9ba20.0ae4f6",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 850,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "7b6c82f2.9babb4",
@@ -8007,7 +8162,7 @@
         "type": "ui_text",
         "z": "21bad413.54339c",
         "group": "777dee3a.1a4ee",
-        "order": 5,
+        "order": 7,
         "width": 0,
         "height": 0,
         "name": "Status Heizungs Pumpe",
@@ -8080,6 +8235,9 @@
         "func": "if(msg.payload == \"off\"){\n    msg.payload = \"0\";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 485,
         "y": 180,
         "wires": [
@@ -8129,6 +8287,9 @@
         "func": "if(msg.payload == \"on\"){\n    msg.payload = \"Timer\";\n    return msg;\n}\nif(msg.payload == \"off\"){\n    msg.payload = \"Manuell\";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 475,
         "y": 225,
         "wires": [
@@ -8186,133 +8347,6 @@
         "wires": [
             [
                 "6b640110.ed795"
-            ]
-        ]
-    },
-    {
-        "id": "9c0f534d.8c113",
-        "type": "debug",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 700,
-        "y": 615,
-        "wires": []
-    },
-    {
-        "id": "ad90ec99.92bc4",
-        "type": "influxdb in",
-        "z": "47a4b7ac.24c1b8",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "read from internal influx database",
-        "query": "SELECT * from randomtest",
-        "rawOutput": true,
-        "precision": "",
-        "retentionPolicy": "",
-        "org": "my-org",
-        "x": 465,
-        "y": 545,
-        "wires": [
-            [
-                "9c0f534d.8c113"
-            ]
-        ]
-    },
-    {
-        "id": "144fc04c.8c7f3",
-        "type": "inject",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 495,
-        "wires": [
-            [
-                "ad90ec99.92bc4"
-            ]
-        ]
-    },
-    {
-        "id": "59ffc7c0.e77028",
-        "type": "influxdb out",
-        "z": "47a4b7ac.24c1b8",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "write to heizomat database",
-        "measurement": "randomtest",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "",
-        "retentionPolicyV18Flux": "",
-        "org": "",
-        "bucket": "",
-        "x": 675,
-        "y": 675,
-        "wires": []
-    },
-    {
-        "id": "6317985d.ec5a98",
-        "type": "function",
-        "z": "47a4b7ac.24c1b8",
-        "name": "single value",
-        "func": "msg.payload = Math.random()*10;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 385,
-        "y": 675,
-        "wires": [
-            [
-                "59ffc7c0.e77028"
-            ]
-        ]
-    },
-    {
-        "id": "8afc4360.9d06e",
-        "type": "inject",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "testtopic",
-        "payload": "",
-        "payloadType": "date",
-        "x": 145,
-        "y": 675,
-        "wires": [
-            [
-                "6317985d.ec5a98"
             ]
         ]
     },
@@ -8520,8 +8554,8 @@
         "label": "Uptime",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 495,
-        "y": 225,
+        "x": 500,
+        "y": 220,
         "wires": []
     },
     {
@@ -8618,8 +8652,8 @@
         "retentionPolicyV18Flux": "",
         "org": "",
         "bucket": "",
-        "x": 645,
-        "y": 165,
+        "x": 920,
+        "y": 120,
         "wires": []
     },
     {
@@ -8640,16 +8674,6 @@
                 "64c85d7b.3947c4"
             ]
         ]
-    },
-    {
-        "id": "27993fa0.4a81",
-        "type": "comment",
-        "z": "47a4b7ac.24c1b8",
-        "name": "-------------   Test --------------",
-        "info": "",
-        "x": 165,
-        "y": 450,
-        "wires": []
     },
     {
         "id": "f96204a4.2d88e8",
@@ -8757,10 +8781,11 @@
         "url": "",
         "action": "0",
         "x": 300,
-        "y": 330,
+        "y": 340,
         "wires": [
             [
-                "b767c1e6.6d19c"
+                "b767c1e6.6d19c",
+                "759b4b90.2e0224"
             ]
         ]
     },
@@ -8777,8 +8802,606 @@
         "retentionPolicyV18Flux": "",
         "org": "",
         "bucket": "",
-        "x": 645,
-        "y": 330,
+        "x": 920,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b98ad622.7a8a08",
+        "type": "exec",
+        "z": "47a4b7ac.24c1b8",
+        "command": "curl -XPOST 'http://influxdb:8086/query' --data-urlencode 'q=CREATE DATABASE \"heizopidb2\"'",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "create influx database",
+        "x": 360,
+        "y": 640,
+        "wires": [
+            [
+                "4ed2afca.81bfc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dac59533.d58d88",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 640,
+        "wires": [
+            [
+                "b98ad622.7a8a08"
+            ]
+        ]
+    },
+    {
+        "id": "4ed2afca.81bfc",
+        "type": "debug",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "87cb1dc7.b6d9a",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "create heizopidb in influx",
+        "info": "",
+        "x": 170,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "759b4b90.2e0224",
+        "type": "ui_text",
+        "z": "47a4b7ac.24c1b8",
+        "group": "777dee3a.1a4ee",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Online",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 490,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "43129e8d.bd88b",
+        "type": "persist in",
+        "z": "ae740e.b407ebf",
+        "name": "Puffertemperatur",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 710,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ece797e.d48af68",
+        "type": "persist in",
+        "z": "ae740e.b407ebf",
+        "name": "Boilertemperatur",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 710,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "eb6aa23e.2e85d",
+        "type": "persist in",
+        "z": "bd9ba20.0ae4f6",
+        "name": "Kesseltemperatur",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1250,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "e108061d.f0f318",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "PuffertemperaturMax",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1240,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "bb713ba.687c3c8",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "PuffertemperaturMin",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1240,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b419de09.7b696",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "BoilertemperaturMax",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1240,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2f25640.2d0f39c",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "BoilertemperaturMin",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1240,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "1e91f53c.de7f6b",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "KesseltemperaturMax",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1240,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "2f01d337.78e2ac",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "KesseltemperaturMin",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1240,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "9f9a3104.39457",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "BoilertemperaturEmail",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1240,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "fce00fa9.0d5",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "KesseltemperaturEmail",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1250,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "56c7e56c.bbd01c",
+        "type": "persist in",
+        "z": "21bad413.54339c",
+        "name": "Mailadressen",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 1210,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "751da3e4.70348c",
+        "type": "comment",
+        "z": "6370c769.b7f218",
+        "name": "debug",
+        "info": "",
+        "x": 180,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "41fdaced.da92e4",
+        "type": "persist out",
+        "z": "37e86829.abd148",
+        "name": "test",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "51156b29.0c0a64"
+            ]
+        ]
+    },
+    {
+        "id": "f0d74c4.c4149b",
+        "type": "persist in",
+        "z": "37e86829.abd148",
+        "name": "test",
+        "storageNode": "36d947d4.eacfd8",
+        "x": 370,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a78a5dd3.4dbaa",
+        "type": "inject",
+        "z": "37e86829.abd148",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3456.34567",
+        "payloadType": "num",
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "f0d74c4.c4149b"
+            ]
+        ]
+    },
+    {
+        "id": "62b1db95.0a9bf4",
+        "type": "inject",
+        "z": "37e86829.abd148",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "41fdaced.da92e4"
+            ]
+        ]
+    },
+    {
+        "id": "51156b29.0c0a64",
+        "type": "debug",
+        "z": "37e86829.abd148",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "67e813de.194eac",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Kesseltemperatur",
+        "measurement": "Kesseltemperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1250,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ef9ae015.74ab7",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Lastbetrieb",
+        "measurement": "Lastbetrieb_in_Prozent",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d8114a50.9576e8",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Restsauerstoff",
+        "measurement": "Restsauerstoff_in_Prozent",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 980,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "22b611a1.6ac43e",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "noch ein test",
+        "payloadType": "str",
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "afe3dce7.f3222"
+            ]
+        ]
+    },
+    {
+        "id": "afe3dce7.f3222",
+        "type": "influxdb out",
+        "z": "47a4b7ac.24c1b8",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "write to teststring",
+        "measurement": "teststring",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "",
+        "retentionPolicyV18Flux": "",
+        "org": "",
+        "bucket": "",
+        "x": 510,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "ae4bd510.6c6da8",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Fehlerregister1",
+        "measurement": "heizomat_fehler1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 940,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2a6a7b89.c09374",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Fehlerregister2",
+        "measurement": "heizomat_fehler2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 940,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "70b7b18c.dee35",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Störung",
+        "measurement": "heizomat_stroerung",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 920,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fc0e3b06.9bab58",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Warnungen",
+        "measurement": "heizomat_warnung",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "53906a16.e01094",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Warnungen Quittier",
+        "measurement": "heizomat_warnung_quittier",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 950,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d93eda1d.5507e8",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Gebläse 1",
+        "measurement": "heizomat_geblaese1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bed346df.38fdc8",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Gebläse 2",
+        "measurement": "heizomat_geblaese2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "4ddd066b.2beb18",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Gebläse 3",
+        "measurement": "heizomat_geblaese3",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ac38ccb8.6a618",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Betriebsart",
+        "measurement": "heizomat_betriebsart",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c68b7885.d37d08",
+        "type": "influxdb out",
+        "z": "bd9ba20.0ae4f6",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "Betriebszustand",
+        "measurement": "heizomat_betriebszustand",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 940,
+        "y": 520,
         "wires": []
     }
 ]
