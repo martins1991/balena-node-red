@@ -604,51 +604,32 @@
         ]
     },
     {
-        "id": "8e2bd0a8.333e8",
+        "id": "45d5b22c.168d5c",
         "type": "subflow",
-        "name": "Timer Settings",
+        "name": "write to influx",
         "info": "",
         "category": "",
         "in": [
             {
-                "x": 500,
-                "y": 320,
+                "x": 60,
+                "y": 140,
                 "wires": [
                     {
-                        "id": "e5d711d8.a68fa"
+                        "id": "108620ad.65812f"
                     }
                 ]
             }
         ],
-        "out": [
-            {
-                "x": 740,
-                "y": 320,
-                "wires": [
-                    {
-                        "id": "e5d711d8.a68fa",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
+        "out": [],
         "env": [
             {
-                "name": "TimerNumber",
-                "type": "num",
-                "value": ""
-            },
-            {
-                "name": "PayloadON",
-                "type": "str",
-                "value": ""
-            },
-            {
-                "name": "PayloadOFF",
+                "name": "MEASUREMENT",
                 "type": "str",
                 "value": ""
             }
-        ]
+        ],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "567754c3.5267dc",
@@ -790,7 +771,8 @@
         "tab": "8ab11c8d.89711",
         "order": 5,
         "disp": true,
-        "width": "8"
+        "width": "8",
+        "collapse": false
     },
     {
         "id": "4724197d.5d5118",
@@ -846,7 +828,7 @@
         "port": "8086",
         "protocol": "http",
         "database": "heizopidb",
-        "name": "internal influx database",
+        "name": "influx container",
         "usetls": false,
         "tls": "d50d0c9f.31e858",
         "influxdbVersion": "1.x",
@@ -2920,6 +2902,9 @@
         "func": "if (msg.payload === 4){\n    msg.payload = \"Wartung mit RGG\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 460,
         "y": 240,
         "wires": [
@@ -3046,6 +3031,9 @@
         "func": "if (msg.payload === 14){\n    msg.payload = \"Vorglühen\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 260,
         "wires": [
@@ -3116,6 +3104,9 @@
         "func": "if (msg.payload === 30){\n    msg.payload = \"Lastbetrieb\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 490,
         "y": 460,
         "wires": [
@@ -3130,6 +3121,9 @@
         "func": "if (msg.payload === 38){\n    msg.payload = \"Teillast\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 500,
         "wires": [
@@ -3144,6 +3138,9 @@
         "func": "if (msg.payload === 39){\n    msg.payload = \"Volllast\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 540,
         "wires": [
@@ -3158,6 +3155,9 @@
         "func": "if (msg.payload === 40){\n    msg.payload = \"Erhaltungsflamme\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 510,
         "y": 580,
         "wires": [
@@ -3256,6 +3256,9 @@
         "func": "if (msg.payload === 101){\n    msg.payload = \"Wartung mit RGG\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 510,
         "y": 860,
         "wires": [
@@ -5885,7 +5888,7 @@
             [
                 "23d2964c.8b904a",
                 "eb6aa23e.2e85d",
-                "67e813de.194eac"
+                "d7d5c5cc.f0d928"
             ]
         ]
     },
@@ -5903,7 +5906,7 @@
                 "c0ba9678.1879d8"
             ],
             [
-                "ae4bd510.6c6da8"
+                "6c9a1751.a45788"
             ]
         ]
     },
@@ -5920,7 +5923,7 @@
                 "8c7f54fa.b3ad58"
             ],
             [
-                "2a6a7b89.c09374"
+                "908525dc.969588"
             ]
         ]
     },
@@ -5937,7 +5940,7 @@
                 "8c7f54fa.b3ad58"
             ],
             [
-                "70b7b18c.dee35"
+                "3bf718c4.ddbd08"
             ]
         ]
     },
@@ -5954,7 +5957,7 @@
                 "8c7f54fa.b3ad58"
             ],
             [
-                "fc0e3b06.9bab58"
+                "2ba53702.831a18"
             ]
         ]
     },
@@ -6018,7 +6021,7 @@
                 "8c7f54fa.b3ad58"
             ],
             [
-                "53906a16.e01094"
+                "84f8bd29.d03cd"
             ]
         ]
     },
@@ -6033,7 +6036,7 @@
         "wires": [
             [],
             [
-                "bed346df.38fdc8"
+                "8b19ebe9.5905d8"
             ]
         ]
     },
@@ -6048,7 +6051,7 @@
         "wires": [
             [],
             [
-                "d93eda1d.5507e8"
+                "fb9366a9.a1e2a8"
             ]
         ]
     },
@@ -6065,7 +6068,7 @@
                 "fe502119.8059"
             ],
             [
-                "ac38ccb8.6a618"
+                "7ec05406.35294c"
             ]
         ]
     },
@@ -6080,7 +6083,7 @@
         "wires": [
             [],
             [
-                "4ddd066b.2beb18"
+                "f700750f.1e7fd8"
             ]
         ]
     },
@@ -6097,7 +6100,7 @@
                 "847c7d9e.40808"
             ],
             [
-                "c68b7885.d37d08"
+                "eac8e6c6.263d78"
             ]
         ]
     },
@@ -6116,7 +6119,7 @@
         "y": 560,
         "wires": [
             [
-                "ef9ae015.74ab7"
+                "db796c9f.07af5"
             ]
         ]
     },
@@ -6177,7 +6180,7 @@
         "y": 760,
         "wires": [
             [
-                "d8114a50.9576e8"
+                "755858f4.749728"
             ]
         ]
     },
@@ -7858,11 +7861,9 @@
             "95b0cec2.c3f87"
         ],
         "x": 100,
-        "y": 480,
+        "y": 340,
         "wires": [
-            [
-                "4223db79.5599ec"
-            ]
+            []
         ]
     },
     {
@@ -7935,6 +7936,9 @@
         "func": "if (msg.payload === 100){\n    msg.payload = \"STOERUNG\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 480,
         "y": 900,
         "wires": [
@@ -7954,20 +7958,6 @@
         "x": 895,
         "y": 90,
         "wires": []
-    },
-    {
-        "id": "e5d711d8.a68fa",
-        "type": "function",
-        "z": "8e2bd0a8.333e8",
-        "name": "",
-        "func": "var x = env.get(\"TimerNumber\"); \nvar y = env.get(\"PayloadON\"); \nvar z = env.get(\"PayloadOFF\"); \n\nflow.set(\"$parent.Timer\"+x, x);\nflow.set(\"$parent.Payload\"+x+\"_on\", y);\nflow.set(\"$parent.Timer\"+x+\"_off\", z);\n\n\n\nmsg.payload = \"Your timer \" + x + \" has been set\";\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 600,
-        "y": 320,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "6b640110.ed795",
@@ -8640,23 +8630,6 @@
         ]
     },
     {
-        "id": "64c85d7b.3947c4",
-        "type": "influxdb out",
-        "z": "47a4b7ac.24c1b8",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "write to heizomat database",
-        "measurement": "ping_heizomat",
-        "precision": "m",
-        "retentionPolicy": "",
-        "database": "",
-        "retentionPolicyV18Flux": "",
-        "org": "",
-        "bucket": "",
-        "x": 920,
-        "y": 120,
-        "wires": []
-    },
-    {
         "id": "8ce81bf7.7feba8",
         "type": "function",
         "z": "47a4b7ac.24c1b8",
@@ -8671,7 +8644,7 @@
         "y": 120,
         "wires": [
             [
-                "64c85d7b.3947c4"
+                "ef74b1a.b91385"
             ]
         ]
     },
@@ -8784,91 +8757,10 @@
         "y": 340,
         "wires": [
             [
-                "b767c1e6.6d19c",
-                "759b4b90.2e0224"
+                "759b4b90.2e0224",
+                "ee58466a.e3f478"
             ]
         ]
-    },
-    {
-        "id": "b767c1e6.6d19c",
-        "type": "influxdb out",
-        "z": "47a4b7ac.24c1b8",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "write to heizomat database",
-        "measurement": "online",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "",
-        "retentionPolicyV18Flux": "",
-        "org": "",
-        "bucket": "",
-        "x": 920,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "b98ad622.7a8a08",
-        "type": "exec",
-        "z": "47a4b7ac.24c1b8",
-        "command": "curl -XPOST 'http://influxdb:8086/query' --data-urlencode 'q=CREATE DATABASE \"heizopidb2\"'",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "create influx database",
-        "x": 360,
-        "y": 640,
-        "wires": [
-            [
-                "4ed2afca.81bfc"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "dac59533.d58d88",
-        "type": "inject",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 640,
-        "wires": [
-            [
-                "b98ad622.7a8a08"
-            ]
-        ]
-    },
-    {
-        "id": "4ed2afca.81bfc",
-        "type": "debug",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 590,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "87cb1dc7.b6d9a",
@@ -8876,8 +8768,8 @@
         "z": "47a4b7ac.24c1b8",
         "name": "create heizopidb in influx",
         "info": "",
-        "x": 170,
-        "y": 580,
+        "x": 150,
+        "y": 420,
         "wires": []
     },
     {
@@ -9125,48 +9017,424 @@
         "wires": []
     },
     {
-        "id": "67e813de.194eac",
-        "type": "influxdb out",
-        "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Kesseltemperatur",
-        "measurement": "Kesseltemperatur",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 1250,
-        "y": 680,
+        "id": "ee58466a.e3f478",
+        "type": "function",
+        "z": "47a4b7ac.24c1b8",
+        "name": "to int",
+        "func": "if(msg.payload == false){\n    msg.payload = -1.0;\n}else{\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "af8d503.fd8b0b"
+            ]
+        ]
+    },
+    {
+        "id": "9c03ca46.2ed5d8",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "create retention policy in influx",
+        "info": "",
+        "x": 160,
+        "y": 640,
         "wires": []
     },
     {
-        "id": "ef9ae015.74ab7",
-        "type": "influxdb out",
-        "z": "bd9ba20.0ae4f6",
+        "id": "f78c897a.d454a8",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "set name heizopidb",
+        "props": [
+            {
+                "p": "name",
+                "v": "heizopidb",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "b5b20513.1fab28"
+            ]
+        ]
+    },
+    {
+        "id": "9c57c99b.38a048",
+        "type": "influxdb in",
+        "z": "47a4b7ac.24c1b8",
         "influxdb": "eeb221fb.ab27f",
-        "name": "Lastbetrieb",
-        "measurement": "Lastbetrieb_in_Prozent",
+        "name": "",
+        "query": "",
+        "rawOutput": false,
         "precision": "",
         "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
+        "org": "",
+        "x": 780,
+        "y": 460,
+        "wires": [
+            [
+                "250801b7.22831e"
+            ]
+        ]
+    },
+    {
+        "id": "832ae8e7.ef6698",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "set retention 1 hour",
+        "props": [
+            {
+                "p": "time",
+                "v": "1h",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 680,
+        "wires": [
+            [
+                "9bb71bf4.147b38"
+            ]
+        ]
+    },
+    {
+        "id": "250801b7.22831e",
+        "type": "debug",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1030,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "748a06bd.675ed8",
+        "type": "influxdb batch",
+        "z": "47a4b7ac.24c1b8",
+        "influxdb": "eeb221fb.ab27f",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "",
+        "database": "",
         "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 930,
+        "org": "",
+        "bucket": "",
+        "x": 780,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "bb5375a3.9309b8",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "trigger",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 1000,
+        "wires": [
+            [
+                "e67da851.7277f8"
+            ]
+        ]
+    },
+    {
+        "id": "e67da851.7277f8",
+        "type": "function",
+        "z": "47a4b7ac.24c1b8",
+        "name": "multiple measurement points",
+        "func": "msg.payload = [\n    {\n        measurement: \"weather_sensor\",\n        fields: {\n            temp: 5.5,\n            light: 678,\n            humidity: 51\n        },\n        tags:{\n            location:\"garden\"\n        },\n        timestamp: new Date()\n    },\n    {\n        measurement: \"alarm_sensor\",\n        fields: {\n            proximity: 999,\n            temp: 19.5\n        },\n        tags:{\n            location:\"home\"\n        },\n        timestamp: new Date()\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1000,
+        "wires": [
+            [
+                "748a06bd.675ed8"
+            ]
+        ]
+    },
+    {
+        "id": "6f7bef2c.8b301",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "Write multiple values",
+        "info": "",
+        "x": 140,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "9bb71bf4.147b38",
+        "type": "template",
+        "z": "47a4b7ac.24c1b8",
+        "name": "query CREATE RETENTION",
+        "field": "query",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CREATE RETENTION POLICY defaultPolicy ON heizopidb DURATION {{time}} REPLICATION 5 DEFAULT",
+        "output": "str",
+        "x": 460,
+        "y": 680,
+        "wires": [
+            [
+                "9c57c99b.38a048"
+            ]
+        ]
+    },
+    {
+        "id": "b5b20513.1fab28",
+        "type": "template",
+        "z": "47a4b7ac.24c1b8",
+        "name": "query CREATE DATABASE",
+        "field": "query",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CREATE DATABASE {{name}}",
+        "output": "str",
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "9c57c99b.38a048"
+            ]
+        ]
+    },
+    {
+        "id": "bdcfd292.86c838",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "influxdb in node",
+        "info": "",
+        "x": 760,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1b132e41.41f992",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "create heizopidb in influx",
+        "info": "",
+        "x": 150,
         "y": 560,
         "wires": []
     },
     {
-        "id": "d8114a50.9576e8",
+        "id": "57779cae.a88e94",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "trigger",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "67c39057.e645a"
+            ]
+        ]
+    },
+    {
+        "id": "67c39057.e645a",
+        "type": "template",
+        "z": "47a4b7ac.24c1b8",
+        "name": "query SHOW DATABASES",
+        "field": "query",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SHOW DATABASES",
+        "output": "str",
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "9c57c99b.38a048"
+            ]
+        ]
+    },
+    {
+        "id": "e0ca913e.3acaa",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "show retention policy in influx",
+        "info": "",
+        "x": 160,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4336abc.685da54",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "trigger",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 760,
+        "wires": [
+            [
+                "af91d897.2110f8"
+            ]
+        ]
+    },
+    {
+        "id": "af91d897.2110f8",
+        "type": "template",
+        "z": "47a4b7ac.24c1b8",
+        "name": "query SHOW RETENTION POLICIES",
+        "field": "query",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SHOW RETENTION POLICIES ON heizopidb",
+        "output": "str",
+        "x": 490,
+        "y": 760,
+        "wires": [
+            [
+                "9c57c99b.38a048"
+            ]
+        ]
+    },
+    {
+        "id": "da86c9c1.f91548",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "create continous query in influx",
+        "info": "",
+        "x": 170,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "b2a65ebe.02acb",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "trigger",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 840,
+        "wires": [
+            [
+                "f0189f30.80604"
+            ]
+        ]
+    },
+    {
+        "id": "f0189f30.80604",
+        "type": "template",
+        "z": "47a4b7ac.24c1b8",
+        "name": "query CREATE CONTINUOUS QUERY",
+        "field": "query",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CREATE CONTINUOUS QUERY aggregate_online ON heizopi_longterm\nBEGIN\n  SELECT min(value) AS value \n  INTO heizopi_longterm.autogen.ping_internet \n  FROM heizopidb.autogen.ping_internet \n  GROUP BY time(15m),* \nEND",
+        "output": "str",
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "9c57c99b.38a048"
+            ]
+        ]
+    },
+    {
+        "id": "4b859db9.9d91f4",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "set name heizopi_longterm",
+        "props": [
+            {
+                "p": "name",
+                "v": "heizopi_longterm",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "b5b20513.1fab28"
+            ]
+        ]
+    },
+    {
+        "id": "108620ad.65812f",
+        "type": "function",
+        "z": "45d5b22c.168d5c",
+        "name": "WriteIntoDatabase enabled?",
+        "func": "var WriteIntoDatabase = global.get(\"WriteIntoDatabase\");\n\nif(WriteIntoDatabase){\n    return msg;\n}\nelse{\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "cb11d183.6f159"
+            ]
+        ]
+    },
+    {
+        "id": "cb11d183.6f159",
         "type": "influxdb out",
-        "z": "bd9ba20.0ae4f6",
+        "z": "45d5b22c.168d5c",
         "influxdb": "eeb221fb.ab27f",
-        "name": "Restsauerstoff",
-        "measurement": "Restsauerstoff_in_Prozent",
+        "name": "write to influx",
+        "measurement": "${MEASUREMENT}",
         "precision": "",
         "retentionPolicy": "",
         "database": "database",
@@ -9174,12 +9442,70 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 980,
-        "y": 760,
+        "x": 540,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "22b611a1.6ac43e",
+        "id": "d23df893.c31028",
+        "type": "subflow:45d5b22c.168d5c",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "test",
+                "type": "str"
+            }
+        ],
+        "x": 390,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "d1315225.c87a3",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "546.34",
+        "payloadType": "num",
+        "x": 130,
+        "y": 1040,
+        "wires": [
+            [
+                "d23df893.c31028"
+            ]
+        ]
+    },
+    {
+        "id": "3bb0e014.7271c",
+        "type": "function",
+        "z": "47a4b7ac.24c1b8",
+        "name": "set WriteIntoDatabase",
+        "func": "global.set(\"WriteIntoDatabase\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "642b6f84.e41a1",
         "type": "inject",
         "z": "47a4b7ac.24c1b8",
         "name": "",
@@ -9197,211 +9523,293 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "noch ein test",
-        "payloadType": "str",
-        "x": 150,
-        "y": 720,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 80,
         "wires": [
             [
-                "afe3dce7.f3222"
+                "3bb0e014.7271c"
             ]
         ]
     },
     {
-        "id": "afe3dce7.f3222",
-        "type": "influxdb out",
+        "id": "432049a2.db2c38",
+        "type": "inject",
         "z": "47a4b7ac.24c1b8",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "write to teststring",
-        "measurement": "teststring",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "",
-        "retentionPolicyV18Flux": "",
-        "org": "",
-        "bucket": "",
-        "x": 510,
-        "y": 720,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 120,
+        "wires": [
+            [
+                "3bb0e014.7271c"
+            ]
+        ]
+    },
+    {
+        "id": "af8d503.fd8b0b",
+        "type": "subflow:45d5b22c.168d5c",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "ping_internet",
+                "type": "str"
+            }
+        ],
+        "x": 650,
+        "y": 340,
         "wires": []
     },
     {
-        "id": "ae4bd510.6c6da8",
-        "type": "influxdb out",
+        "id": "ef74b1a.b91385",
+        "type": "subflow:45d5b22c.168d5c",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "ping_heizomat",
+                "type": "str"
+            }
+        ],
+        "x": 650,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "10d48b41.4f6b55",
+        "type": "comment",
+        "z": "47a4b7ac.24c1b8",
+        "name": "activate influxdb writes globally",
+        "info": "",
+        "x": 970,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6c9a1751.a45788",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Fehlerregister1",
-        "measurement": "heizomat_fehler1",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
+        "name": "heizomat_fehler1",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_fehler1",
+                "type": "str"
+            }
+        ],
         "x": 940,
         "y": 160,
         "wires": []
     },
     {
-        "id": "2a6a7b89.c09374",
-        "type": "influxdb out",
+        "id": "908525dc.969588",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Fehlerregister2",
-        "measurement": "heizomat_fehler2",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
+        "name": "heizomat_fehler2",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_fehler2",
+                "type": "str"
+            }
+        ],
         "x": 940,
         "y": 200,
         "wires": []
     },
     {
-        "id": "70b7b18c.dee35",
-        "type": "influxdb out",
+        "id": "3bf718c4.ddbd08",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Störung",
-        "measurement": "heizomat_stroerung",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 920,
+        "name": "heizomat_stroerung",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_stroerung",
+                "type": "str"
+            }
+        ],
+        "x": 950,
         "y": 240,
         "wires": []
     },
     {
-        "id": "fc0e3b06.9bab58",
-        "type": "influxdb out",
+        "id": "2ba53702.831a18",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Warnungen",
-        "measurement": "heizomat_warnung",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 930,
+        "name": "heizomat_warnung",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_warnung",
+                "type": "str"
+            }
+        ],
+        "x": 950,
         "y": 280,
         "wires": []
     },
     {
-        "id": "53906a16.e01094",
-        "type": "influxdb out",
+        "id": "84f8bd29.d03cd",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Warnungen Quittier",
-        "measurement": "heizomat_warnung_quittier",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 950,
+        "name": "heizomat_warnung_quittier",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_warnung_quittier",
+                "type": "str"
+            }
+        ],
+        "x": 970,
         "y": 320,
         "wires": []
     },
     {
-        "id": "d93eda1d.5507e8",
-        "type": "influxdb out",
+        "id": "fb9366a9.a1e2a8",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Gebläse 1",
-        "measurement": "heizomat_geblaese1",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 930,
+        "name": "heizomat_geblaese1",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_geblaese1",
+                "type": "str"
+            }
+        ],
+        "x": 950,
         "y": 360,
         "wires": []
     },
     {
-        "id": "bed346df.38fdc8",
-        "type": "influxdb out",
+        "id": "8b19ebe9.5905d8",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Gebläse 2",
-        "measurement": "heizomat_geblaese2",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 930,
+        "name": "heizomat_geblaese2",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_geblaese2",
+                "type": "str"
+            }
+        ],
+        "x": 950,
         "y": 400,
         "wires": []
     },
     {
-        "id": "4ddd066b.2beb18",
-        "type": "influxdb out",
+        "id": "f700750f.1e7fd8",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Gebläse 3",
-        "measurement": "heizomat_geblaese3",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 930,
+        "name": "heizomat_geblaese3",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_geblaese3",
+                "type": "str"
+            }
+        ],
+        "x": 950,
         "y": 440,
         "wires": []
     },
     {
-        "id": "ac38ccb8.6a618",
-        "type": "influxdb out",
+        "id": "7ec05406.35294c",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Betriebsart",
-        "measurement": "heizomat_betriebsart",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 930,
+        "name": "heizomat_betriebsart",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_betriebsart",
+                "type": "str"
+            }
+        ],
+        "x": 960,
         "y": 480,
         "wires": []
     },
     {
-        "id": "c68b7885.d37d08",
-        "type": "influxdb out",
+        "id": "eac8e6c6.263d78",
+        "type": "subflow:45d5b22c.168d5c",
         "z": "bd9ba20.0ae4f6",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "Betriebszustand",
-        "measurement": "heizomat_betriebszustand",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "ms",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 940,
+        "name": "heizomat_betriebszustand",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_betriebszustand",
+                "type": "str"
+            }
+        ],
+        "x": 970,
         "y": 520,
+        "wires": []
+    },
+    {
+        "id": "db796c9f.07af5",
+        "type": "subflow:45d5b22c.168d5c",
+        "z": "bd9ba20.0ae4f6",
+        "name": "heizomat_lastbetrieb",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_lastbetrieb",
+                "type": "str"
+            }
+        ],
+        "x": 950,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d7d5c5cc.f0d928",
+        "type": "subflow:45d5b22c.168d5c",
+        "z": "bd9ba20.0ae4f6",
+        "name": "heizomat_kesseltemperatur",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_kesseltemperatur",
+                "type": "str"
+            }
+        ],
+        "x": 1280,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "755858f4.749728",
+        "type": "subflow:45d5b22c.168d5c",
+        "z": "bd9ba20.0ae4f6",
+        "name": "heizomat_restsauerstoff",
+        "env": [
+            {
+                "name": "MEASUREMENT",
+                "value": "heizomat_restsauerstoff",
+                "type": "str"
+            }
+        ],
+        "x": 1000,
+        "y": 760,
         "wires": []
     }
 ]
