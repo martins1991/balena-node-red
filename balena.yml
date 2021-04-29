@@ -15,4 +15,5 @@ data:
     - PORT: 1880
     - USERNAME: "root"
     - PASSWORD: "$2b$08$HfqMX3mqHWEJsT5V3KrKWO90awQ2louAVDZ/zwyI.WSxfHpA331de"
+    - TZ: "Europe/Berlin"
   defaultDeviceType: "raspberrypi3-64"
