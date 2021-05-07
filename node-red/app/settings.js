@@ -77,6 +77,10 @@ module.exports = {
 
     httpStatic: '/usr/src/app/assets/',
 
+    contextStorage: {
+    	default    : { module: "localfilesystem"}
+    },
+
     // Securing Node-RED
     // -----------------
     // To password protect the Node-RED editor and admin API, the following
