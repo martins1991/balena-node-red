@@ -23,7 +23,7 @@
         "cardHSpacing": 5,
         "cardMinWidth": null,
         "cardRound": null,
-        "cardVSpacing": 40
+        "cardVSpacing": 20
       },
       "color": {
         "cardColor": "#b4ff00",
@@ -34,11 +34,13 @@
         "mode": "discrete",
         "thresholds": [
           {
+            "$$hashKey": "object:132",
             "color": "#F2495C",
             "tooltip": "no connection",
             "value": "-1"
           },
           {
+            "$$hashKey": "object:133",
             "color": "#73BF69",
             "tooltip": "good",
             "value": "0"
@@ -53,7 +55,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 6,
         "w": 12,
         "x": 0,
         "y": 0
@@ -90,7 +92,7 @@
           "hide": false,
           "measurement": "ping_heizomat",
           "orderByTime": "ASC",
-          "policy": "autogen",
+          "policy": "defaultPolicy",
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
@@ -128,7 +130,7 @@
           "hide": false,
           "measurement": "ping_internet",
           "orderByTime": "ASC",
-          "policy": "autogen",
+          "policy": "defaultPolicy",
           "query": "SELECT \"value\" FROM \"autogen\".\"online\" WHERE $timeFilter GROUP BY time($__interval)",
           "rawQuery": false,
           "refId": "B",
@@ -163,7 +165,7 @@
       },
       "type": "flant-statusmap-panel",
       "useMax": false,
-      "usingPagination": true,
+      "usingPagination": false,
       "xAxis": {
         "show": true
       },
@@ -178,6 +180,292 @@
         "labelTemplate": "",
         "usingSplitLabel": true
       }
+    },
+    {
+      "cards": {
+        "cardHSpacing": 2,
+        "cardMinWidth": 5,
+        "cardRound": null,
+        "cardVSpacing": 2
+      },
+      "color": {
+        "cardColor": "#b4ff00",
+        "colorScale": "sqrt",
+        "colorScheme": "interpolateGnYlRd",
+        "defaultColor": "#757575",
+        "exponent": 0.5,
+        "mode": "discrete",
+        "thresholds": [
+          {
+            "$$hashKey": "object:335",
+            "color": "#37872D",
+            "tooltip": "Dauerbetrieb",
+            "value": "1"
+          },
+          {
+            "$$hashKey": "object:336",
+            "color": "#FADE2A",
+            "tooltip": "Zündbetrieb",
+            "value": "2"
+          },
+          {
+            "$$hashKey": "object:337",
+            "color": "#F2495C",
+            "tooltip": "Wartung",
+            "value": 0
+          },
+          {
+            "$$hashKey": "object:1012",
+            "color": "#F2495C",
+            "tooltip": "Wartung mit RGG",
+            "value": "4"
+          }
+        ]
+      },
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 0,
+        "y": 6
+      },
+      "highlightCards": true,
+      "id": 4,
+      "legend": {
+        "show": true
+      },
+      "nullPointMode": "as empty",
+      "pageSize": 15,
+      "seriesFilterIndex": -1,
+      "statusmap": {
+        "ConfigVersion": "v1"
+      },
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Beriebsart",
+      "tooltip": {
+        "extraInfo": "",
+        "freezeOnClick": true,
+        "items": [],
+        "show": true,
+        "showExtraInfo": false,
+        "showItems": false
+      },
+      "type": "flant-statusmap-panel",
+      "useMax": true,
+      "usingPagination": false,
+      "xAxis": {
+        "show": true
+      },
+      "yAxis": {
+        "maxWidth": -1,
+        "minWidth": -1,
+        "show": true
+      },
+      "yAxisSort": "metrics",
+      "yLabel": {
+        "delimiter": "",
+        "labelTemplate": "",
+        "usingSplitLabel": false
+      }
+    },
+    {
+      "cards": {
+        "cardHSpacing": 2,
+        "cardMinWidth": 5,
+        "cardRound": null,
+        "cardVSpacing": 2
+      },
+      "color": {
+        "cardColor": "#b4ff00",
+        "colorScale": "sqrt",
+        "colorScheme": "interpolateGnYlRd",
+        "defaultColor": "#757575",
+        "exponent": 0.5,
+        "mode": "discrete",
+        "thresholds": [
+          {
+            "$$hashKey": "object:886",
+            "color": "#F2495C",
+            "tooltip": "Wartung",
+            "value": 0
+          },
+          {
+            "$$hashKey": "object:887",
+            "color": "#F2CC0C",
+            "tooltip": "Start",
+            "value": 1
+          },
+          {
+            "$$hashKey": "object:888",
+            "color": "#FFEE52",
+            "tooltip": "Ende Start",
+            "value": 2
+          },
+          {
+            "$$hashKey": "object:889",
+            "color": "#37872D",
+            "tooltip": "Lastbetrieb",
+            "value": "30"
+          },
+          {
+            "$$hashKey": "object:890",
+            "color": "#96D98D",
+            "tooltip": "Teillast",
+            "value": "38"
+          },
+          {
+            "$$hashKey": "object:891",
+            "color": "#56A64B",
+            "tooltip": "Volllast",
+            "value": "39"
+          },
+          {
+            "$$hashKey": "object:892",
+            "color": "#56A64B",
+            "tooltip": "Erhaltungsflamme",
+            "value": "40"
+          },
+          {
+            "$$hashKey": "object:893",
+            "color": "#C4162A",
+            "tooltip": "Störung",
+            "value": "100"
+          }
+        ]
+      },
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 10
+      },
+      "highlightCards": true,
+      "id": 6,
+      "legend": {
+        "show": true
+      },
+      "nullPointMode": "as empty",
+      "pageSize": 15,
+      "seriesFilterIndex": -1,
+      "statusmap": {
+        "ConfigVersion": "v1"
+      },
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Betriebszustand",
+      "tooltip": {
+        "extraInfo": "",
+        "freezeOnClick": true,
+        "items": [],
+        "show": true,
+        "showExtraInfo": false,
+        "showItems": false
+      },
+      "type": "flant-statusmap-panel",
+      "useMax": true,
+      "usingPagination": false,
+      "xAxis": {
+        "show": true
+      },
+      "yAxis": {
+        "maxWidth": -1,
+        "minWidth": -1,
+        "show": true
+      },
+      "yAxisSort": "metrics",
+      "yLabel": {
+        "delimiter": "",
+        "labelTemplate": "",
+        "usingSplitLabel": false
+      }
     }
   ],
   "schemaVersion": 25,
@@ -187,12 +475,12 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "HeizoPi",
   "uid": "eH6GGn9Gz",
-  "version": 6
+  "version": 9
 }
