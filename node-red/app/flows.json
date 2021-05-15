@@ -5799,8 +5799,7 @@
         "y": 600,
         "wires": [
             [
-                "23d2964c.8b904a",
-                "eb6aa23e.2e85d"
+                "23d2964c.8b904a"
             ]
         ]
     },
@@ -6989,20 +6988,6 @@
         "wires": []
     },
     {
-        "id": "2c3993fc.a6c44c",
-        "type": "link in",
-        "z": "bd9ba20.0ae4f6",
-        "name": "set SolltemperaturKessel",
-        "links": [
-            "6e3291d5.19ee7"
-        ],
-        "x": 195,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6e3291d5.19ee7",
         "type": "link out",
         "z": "21bad413.54339c",
@@ -8185,7 +8170,7 @@
         "retentionPolicyV18Flux": "",
         "org": "",
         "bucket": "",
-        "x": 920,
+        "x": 700,
         "y": 120,
         "wires": []
     },
@@ -8335,72 +8320,8 @@
         "retentionPolicyV18Flux": "",
         "org": "",
         "bucket": "",
-        "x": 920,
+        "x": 700,
         "y": 340,
-        "wires": []
-    },
-    {
-        "id": "b98ad622.7a8a08",
-        "type": "exec",
-        "z": "47a4b7ac.24c1b8",
-        "command": "curl -XPOST 'http://influxdb:8086/query' --data-urlencode 'q=CREATE DATABASE \"heizopidb2\"'",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "create influx database",
-        "x": 360,
-        "y": 640,
-        "wires": [
-            [
-                "4ed2afca.81bfc"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "dac59533.d58d88",
-        "type": "inject",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 640,
-        "wires": [
-            [
-                "b98ad622.7a8a08"
-            ]
-        ]
-    },
-    {
-        "id": "4ed2afca.81bfc",
-        "type": "debug",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 590,
-        "y": 640,
         "wires": []
     },
     {
@@ -8410,7 +8331,7 @@
         "name": "create heizopidb in influx",
         "info": "",
         "x": 170,
-        "y": 580,
+        "y": 500,
         "wires": []
     },
     {
@@ -8447,16 +8368,6 @@
         "storageNode": "36d947d4.eacfd8",
         "x": 710,
         "y": 440,
-        "wires": []
-    },
-    {
-        "id": "eb6aa23e.2e85d",
-        "type": "persist in",
-        "z": "bd9ba20.0ae4f6",
-        "name": "Kesseltemperatur",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1250,
-        "y": 640,
         "wires": []
     },
     {
@@ -8658,52 +8569,6 @@
         "wires": []
     },
     {
-        "id": "22b611a1.6ac43e",
-        "type": "inject",
-        "z": "47a4b7ac.24c1b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "noch ein test",
-        "payloadType": "str",
-        "x": 150,
-        "y": 720,
-        "wires": [
-            [
-                "afe3dce7.f3222"
-            ]
-        ]
-    },
-    {
-        "id": "afe3dce7.f3222",
-        "type": "influxdb out",
-        "z": "47a4b7ac.24c1b8",
-        "influxdb": "eeb221fb.ab27f",
-        "name": "write to teststring",
-        "measurement": "teststring",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "",
-        "retentionPolicyV18Flux": "",
-        "org": "",
-        "bucket": "",
-        "x": 510,
-        "y": 720,
-        "wires": []
-    },
-    {
         "id": "1a38f6a5.cd4c29",
         "type": "function",
         "z": "3abe8c84.455934",
@@ -8821,7 +8686,7 @@
         "z": "bd9ba20.0ae4f6",
         "influxdb": "eeb221fb.ab27f",
         "name": "",
-        "measurement": "heizomattest",
+        "measurement": "heizomat",
         "precision": "",
         "retentionPolicy": "",
         "database": "test",
@@ -8829,7 +8694,7 @@
         "retentionPolicyV18Flux": "",
         "org": "",
         "bucket": "",
-        "x": 1130,
+        "x": 1110,
         "y": 840,
         "wires": []
     },
@@ -9009,6 +8874,87 @@
         "statusType": "auto",
         "x": 710,
         "y": 220,
+        "wires": []
+    },
+    {
+        "id": "897909d7.f5e958",
+        "type": "influxdb in",
+        "z": "47a4b7ac.24c1b8",
+        "influxdb": "eeb221fb.ab27f",
+        "name": "",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 700,
+        "y": 540,
+        "wires": [
+            [
+                "a5e6844f.8f4178"
+            ]
+        ]
+    },
+    {
+        "id": "d39ef283.6798c",
+        "type": "template",
+        "z": "47a4b7ac.24c1b8",
+        "name": "CREATE DATABASE \"heizopidb\"",
+        "field": "query",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CREATE DATABASE \"heizopidb\" WITH DURATION 1w REPLICATION 1 SHARD DURATION 1h NAME \"one_week\"",
+        "output": "str",
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "897909d7.f5e958"
+            ]
+        ]
+    },
+    {
+        "id": "98f07ae7.3ae358",
+        "type": "inject",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "d39ef283.6798c"
+            ]
+        ]
+    },
+    {
+        "id": "a5e6844f.8f4178",
+        "type": "debug",
+        "z": "47a4b7ac.24c1b8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 920,
+        "y": 540,
         "wires": []
     }
 ]
