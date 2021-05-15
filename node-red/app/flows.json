@@ -3613,7 +3613,7 @@
         "type": "file",
         "z": "148e244.a6e71dc",
         "name": "/data/HeizoPi/Betriebsparameter.json",
-        "filename": "/data/HeizoPi/Betriebsparameter.json",
+        "filename": "/data/Betriebsparameter.json",
         "appendNewline": true,
         "createDir": true,
         "overwriteFile": "true",
@@ -3668,7 +3668,7 @@
         "type": "file in",
         "z": "148e244.a6e71dc",
         "name": "/data/HeizoPi/Betriebsparameter.json",
-        "filename": "/data/HeizoPi/Betriebsparameter.json",
+        "filename": "/data/Betriebsparameter.json",
         "format": "utf8",
         "x": 410,
         "y": 240,
@@ -4034,9 +4034,7 @@
         "x": 480,
         "y": 220,
         "wires": [
-            [
-                "43129e8d.bd88b"
-            ]
+            []
         ]
     },
     {
@@ -5143,9 +5141,7 @@
         "x": 480,
         "y": 440,
         "wires": [
-            [
-                "ece797e.d48af68"
-            ]
+            []
         ]
     },
     {
@@ -6327,8 +6323,7 @@
         "y": 640,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "bb713ba.687c3c8"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -6347,8 +6342,7 @@
         "y": 600,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "e108061d.f0f318"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -6416,8 +6410,7 @@
         "y": 760,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "2f25640.2d0f39c"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -6436,8 +6429,7 @@
         "y": 720,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "b419de09.7b696"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -6627,8 +6619,7 @@
         "y": 920,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "2f01d337.78e2ac"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -6647,8 +6638,7 @@
         "y": 880,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "1e91f53c.de7f6b"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -7529,8 +7519,7 @@
         "y": 1040,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "9f9a3104.39457"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -7572,8 +7561,7 @@
         "y": 1160,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "56c7e56c.bbd01c"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -7660,8 +7648,7 @@
         "y": 1100,
         "wires": [
             [
-                "22d2596b.9cb846",
-                "fce00fa9.0d5"
+                "22d2596b.9cb846"
             ]
         ]
     },
@@ -8348,116 +8335,6 @@
         "layout": "row-spread",
         "x": 490,
         "y": 260,
-        "wires": []
-    },
-    {
-        "id": "43129e8d.bd88b",
-        "type": "persist in",
-        "z": "ae740e.b407ebf",
-        "name": "Puffertemperatur",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 710,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "ece797e.d48af68",
-        "type": "persist in",
-        "z": "ae740e.b407ebf",
-        "name": "Boilertemperatur",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 710,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "e108061d.f0f318",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "PuffertemperaturMax",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1240,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "bb713ba.687c3c8",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "PuffertemperaturMin",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1240,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "b419de09.7b696",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "BoilertemperaturMax",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1240,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "2f25640.2d0f39c",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "BoilertemperaturMin",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1240,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "1e91f53c.de7f6b",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "KesseltemperaturMax",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1240,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "2f01d337.78e2ac",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "KesseltemperaturMin",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1240,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "9f9a3104.39457",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "BoilertemperaturEmail",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1240,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "fce00fa9.0d5",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "KesseltemperaturEmail",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1250,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "56c7e56c.bbd01c",
-        "type": "persist in",
-        "z": "21bad413.54339c",
-        "name": "Mailadressen",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 1210,
-        "y": 1160,
         "wires": []
     },
     {
