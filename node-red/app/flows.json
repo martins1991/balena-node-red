@@ -8718,382 +8718,6 @@
         ]
     },
     {
-        "id": "2390df5d.1d018",
-        "type": "schedex",
-        "z": "b29fa04e.ba57d",
-        "name": "Timer",
-        "passthroughunhandled": false,
-        "suspended": false,
-        "lat": "54.525671",
-        "lon": "-1.3113165",
-        "ontime": "",
-        "ontopic": "state",
-        "onpayload": "1",
-        "onoffset": "",
-        "onrandomoffset": 0,
-        "offtime": "",
-        "offtopic": "state",
-        "offpayload": "0",
-        "offoffset": "",
-        "offrandomoffset": 0,
-        "mon": true,
-        "tue": true,
-        "wed": true,
-        "thu": true,
-        "fri": true,
-        "sat": true,
-        "sun": true,
-        "x": 1050,
-        "y": 320,
-        "wires": [
-            [
-                "fb37036b.18c9b",
-                "7a76c698.9c1bd8",
-                "55326685.880888"
-            ]
-        ]
-    },
-    {
-        "id": "504f0d65.380404",
-        "type": "ui_text_input",
-        "z": "b29fa04e.ba57d",
-        "name": "T2 On",
-        "label": "",
-        "tooltip": "",
-        "group": "8724bcdb.fa28b",
-        "order": 2,
-        "width": 4,
-        "height": 1,
-        "passthru": false,
-        "mode": "time",
-        "delay": "0",
-        "topic": "Ton",
-        "x": 330,
-        "y": 140,
-        "wires": [
-            [
-                "37ef6ee.f64cf92"
-            ]
-        ]
-    },
-    {
-        "id": "7d785a1d.d1eb54",
-        "type": "ui_button",
-        "z": "b29fa04e.ba57d",
-        "name": "Set ON",
-        "group": "8724bcdb.fa28b",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "{{msg.topic}}",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "{{msg.color}}",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "buttonON",
-        "x": 660,
-        "y": 60,
-        "wires": [
-            [
-                "d07d813d.d4841"
-            ]
-        ]
-    },
-    {
-        "id": "fe2e6da6.342a4",
-        "type": "ui_text_input",
-        "z": "b29fa04e.ba57d",
-        "name": "T2 Off",
-        "label": "",
-        "tooltip": "",
-        "group": "8724bcdb.fa28b",
-        "order": 4,
-        "width": 4,
-        "height": 1,
-        "passthru": false,
-        "mode": "time",
-        "delay": "0",
-        "topic": "Toff",
-        "x": 330,
-        "y": 180,
-        "wires": [
-            [
-                "37ef6ee.f64cf92"
-            ]
-        ]
-    },
-    {
-        "id": "75d06ded.966714",
-        "type": "ui_button",
-        "z": "b29fa04e.ba57d",
-        "name": "Set OFF",
-        "group": "8724bcdb.fa28b",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "{{msg.topic}}",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "{{msg.color}}",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "buttonOFF",
-        "x": 660,
-        "y": 180,
-        "wires": [
-            [
-                "d07d813d.d4841"
-            ]
-        ]
-    },
-    {
-        "id": "606bd5d7.cab51c",
-        "type": "ui_text",
-        "z": "b29fa04e.ba57d",
-        "group": "8724bcdb.fa28b",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "name": "Timer Status",
-        "label": "{{msg.topic}}",
-        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
-        "layout": "row-spread",
-        "x": 1030,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "15e9fc01.8eb3f4",
-        "type": "ui_button",
-        "z": "b29fa04e.ba57d",
-        "name": "Reset Button",
-        "group": "8724bcdb.fa28b",
-        "order": 6,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "label": "Reset",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 90,
-        "y": 300,
-        "wires": [
-            [
-                "ebac5dfa.8b0c5"
-            ]
-        ]
-    },
-    {
-        "id": "37ef6ee.f64cf92",
-        "type": "function",
-        "z": "b29fa04e.ba57d",
-        "name": "Set T2 On",
-        "func": "var z = flow.get(\"Timer2\");\n\n//if timer on is set\nif(msg.topic === \"Ton\"){\n    flow.set(\"timer\"+z+\"_on\", msg.payload);\n    msg.color = \"red\";\n    msg.topic = \"Press\";\n    return [msg, null];\n    \n    \n}\n\n//if timer off is set\nif(msg.topic === \"Toff\"){\n    flow.set(\"timer\"+z+\"_off\", msg.payload);\n    msg.color = \"red\";\n    msg.topic = \"Press\";\n    return [null, msg];\n    \n}\n\n// reboot detected\nif(msg.topic === \"reboot\"){\n    msg.color = \"grey\";\n    msg.topic = \"Select Time\";\n    return [msg, msg];\n    \n}",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
-        "y": 120,
-        "wires": [
-            [
-                "7d785a1d.d1eb54"
-            ],
-            [
-                "75d06ded.966714"
-            ]
-        ]
-    },
-    {
-        "id": "ebac5dfa.8b0c5",
-        "type": "function",
-        "z": "b29fa04e.ba57d",
-        "name": "Reset",
-        "func": "var z = flow.get(\"Timer2\");\n\nvar timerlabel = \"Timer \"+ z;\nflow.set(\"$parent.timer\"+z+\"_on\", 0);\nflow.set(\"$parent.timer\"+z+\"_off\", 0);\nflow.set(\"$parent.T\"+z+\"on\", null);\nflow.set(\"$parent.T\"+z+\"off\", null);\n\nvar msg1 = {payload: \"Timer \"+z+\" reset\"};\nvar msg2 = {payload: 0};\nvar msg3 = {payload: \"disabled\",\n            topic: timerlabel,\n            color: \"red\"};\nvar msg4 = {color: \"grey\",\n            topic: \"Select Time\",\n};\n\nvar msg5 = {payload:{suspended: false}};\nvar msg6 = {payload: true};\n\nreturn [msg1, msg2, msg3, msg4, msg5, msg6];",
-        "outputs": 6,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 360,
-        "wires": [
-            [
-                "613732fa.624b4c"
-            ],
-            [
-                "fe2e6da6.342a4",
-                "504f0d65.380404"
-            ],
-            [
-                "606bd5d7.cab51c"
-            ],
-            [
-                "7d785a1d.d1eb54",
-                "75d06ded.966714"
-            ],
-            [
-                "2390df5d.1d018"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "d987c0b3.feb8d",
-        "type": "inject",
-        "z": "b29fa04e.ba57d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Started!",
-        "payloadType": "str",
-        "x": 540,
-        "y": 300,
-        "wires": [
-            [
-                "832ca147.47c3c"
-            ]
-        ]
-    },
-    {
-        "id": "832ca147.47c3c",
-        "type": "function",
-        "z": "b29fa04e.ba57d",
-        "name": "Apply stored values ",
-        "func": "var z = flow.get(\"Timer2\");\n\n\n// restore days\nvar mon = flow.get(\"Monday\"+z);\nvar tue = flow.get(\"Tuesday\"+z);\nvar wed = flow.get(\"Wednesday\"+z);\nvar thu = flow.get(\"Thursday\"+z);\nvar fri = flow.get(\"Friday\"+z);\nvar sat = flow.get(\"Saturday\"+z);\nvar sun = flow.get(\"Sunday\"+z);\n\n//restore timers\nvar timeON = flow.get(\"T\"+z+\"on\");\nvar timeOFF = flow.get(\"T\"+z+\"off\");\nvar timerlabel = \"Timer \"+ z;\n\n\n\nvar msg1 = {payload: {ontime: \"ontime \" + timeON}};\nvar msg2 = {payload: {offtime: \"offtime \" + timeOFF}};\nvar msg3 = {topic: timerlabel};\nvar msg4 = {payload : { \"mon\": mon,\n                \"tue\": tue,\n                \"wed\": wed,\n                \"thu\": thu,\n                \"fri\": fri,\n                \"sat\": sat,\n                \"sun\": sun,}\n};\n                     \n    \nreturn [msg1, msg2, msg3];",
-        "outputs": 4,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 750,
-        "y": 300,
-        "wires": [
-            [
-                "2390df5d.1d018"
-            ],
-            [
-                "2390df5d.1d018"
-            ],
-            [
-                "606bd5d7.cab51c"
-            ],
-            [
-                "2390df5d.1d018"
-            ]
-        ]
-    },
-    {
-        "id": "3d1e20d0.2dba7",
-        "type": "comment",
-        "z": "b29fa04e.ba57d",
-        "name": "Reboot Fix",
-        "info": "",
-        "x": 540,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "324ee919.c62016",
-        "type": "inject",
-        "z": "b29fa04e.ba57d",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "reboot",
-        "payload": "Started!",
-        "payloadType": "str",
-        "x": 320,
-        "y": 80,
-        "wires": [
-            [
-                "37ef6ee.f64cf92"
-            ]
-        ]
-    },
-    {
-        "id": "2f981442.621c4c",
-        "type": "comment",
-        "z": "b29fa04e.ba57d",
-        "name": "Set Button",
-        "info": "",
-        "x": 300,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "613732fa.624b4c",
-        "type": "ui_toast",
-        "z": "b29fa04e.ba57d",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "topic": "Timer 1",
-        "name": "",
-        "x": 310,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "d07d813d.d4841",
-        "type": "function",
-        "z": "b29fa04e.ba57d",
-        "name": "On button press",
-        "func": "var z = flow.get(\"Timer2\");\n\nfunction calcTime(hh){\n    var hours = (\"0\"+Math.floor((hh%86400)/3600)).slice(-2);\n    var minutes = (\"0\"+Math.floor((hh%3600)/60)).slice(-2);\n    return hours + \":\" + minutes;\n}\n\nvar time = null;\nvar timerlabel = \"Timer \"+ z;\n\n\n// when button on is pressed\nif(msg.topic === \"buttonON\"){\n    var t1  = flow.get(\"timer\"+z+\"_on\")/1000;\n    time = calcTime(t1);\n    flow.set(\"T\"+z+\"on\", time);\n    //send to text element\n    var msg1 = {payload: \"SET\", topic: timerlabel, color: \"green\"};\n    //send to schedex\n    var msg2 = {payload: {ontime: \"ontime \" + time,\n                          suspended: false},\n                topic: \"SET\",\n                color:   \"green\"};\n    return [msg1,msg2,null,null];\n}\n// when button off is pressed\nif(msg.topic === \"buttonOFF\"){\n    var t2 = flow.get(\"timer\"+z+\"_off\")/1000;\n    time = calcTime(t2);\n    flow.set(\"T\"+z+\"off\", time);\n    //send to text element\n    var msg3 = {payload: \"SET\", topic: timerlabel, color: \"green\"};\n    //send to schedex\n    var msg4 = {payload: {offtime: \"offtime \" + time,\n                          suspended: false},\n                topic: \"SET\",\n                color:   \"green\"};\n    return [null,null,msg3,msg4];\n    \n}\n\nreturn msg;",
-        "outputs": 4,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 820,
-        "y": 120,
-        "wires": [
-            [
-                "606bd5d7.cab51c"
-            ],
-            [
-                "2390df5d.1d018",
-                "7d785a1d.d1eb54"
-            ],
-            [
-                "606bd5d7.cab51c"
-            ],
-            [
-                "2390df5d.1d018",
-                "75d06ded.966714"
-            ]
-        ]
-    },
-    {
         "id": "6c984fbc.38b18",
         "type": "inject",
         "z": "b29fa04e.ba57d",
@@ -9168,46 +8792,9 @@
         "level": "0",
         "freq": "",
         "out": "out",
-        "x": 1400,
-        "y": 220,
+        "x": 720,
+        "y": 300,
         "wires": []
-    },
-    {
-        "id": "fb37036b.18c9b",
-        "type": "debug",
-        "z": "b29fa04e.ba57d",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1330,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "7a76c698.9c1bd8",
-        "type": "function",
-        "z": "b29fa04e.ba57d",
-        "name": "",
-        "func": "if(msg.payload.state == \"on\"){\n    msg.payload = 1;\n}\nelse if(msg.payload.state == \"off\"){\n    msg.payload = 0;\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 220,
-        "wires": [
-            [
-                "195176e7.3218d9",
-                "51fadafe.79ddd4"
-            ]
-        ]
     },
     {
         "id": "40449445.3298cc",
@@ -9247,49 +8834,6 @@
         "wires": []
     },
     {
-        "id": "630aa80.b17c158",
-        "type": "ui_button",
-        "z": "b29fa04e.ba57d",
-        "name": "",
-        "group": "8724bcdb.fa28b",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Timer Status",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "info",
-        "payloadType": "str",
-        "topic": "info",
-        "topicType": "msg",
-        "x": 830,
-        "y": 40,
-        "wires": [
-            [
-                "2390df5d.1d018"
-            ]
-        ]
-    },
-    {
-        "id": "55326685.880888",
-        "type": "ui_text",
-        "z": "b29fa04e.ba57d",
-        "group": "8724bcdb.fa28b",
-        "order": 8,
-        "width": 6,
-        "height": "3",
-        "name": "",
-        "label": "Info",
-        "format": "Nächste Anschaltung: {{msg.payload.on}}<br/>Nächste Ausschaltung: {{msg.payload.off}}<br/>Aktuell: {{msg.payload.state}}",
-        "layout": "col-center",
-        "x": 1330,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "b1095b03.169808",
         "type": "link out",
         "z": "b29fa04e.ba57d",
@@ -9297,8 +8841,8 @@
         "links": [
             "109077d3.d6bb88"
         ],
-        "x": 1475,
-        "y": 180,
+        "x": 815,
+        "y": 260,
         "wires": []
     },
     {
@@ -9312,12 +8856,159 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
-        "y": 180,
+        "x": 700,
+        "y": 260,
         "wires": [
             [
                 "b1095b03.169808"
             ]
         ]
+    },
+    {
+        "id": "85e60440.856fa8",
+        "type": "file",
+        "z": "b29fa04e.ba57d",
+        "name": "WriteFile",
+        "filename": "/data/timer-heizungspumpe.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 560,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31eb231b.76346c",
+        "type": "inject",
+        "z": "b29fa04e.ba57d",
+        "name": "FireAfterReboot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "a93ba83a.c46f28"
+            ]
+        ]
+    },
+    {
+        "id": "a93ba83a.c46f28",
+        "type": "file in",
+        "z": "b29fa04e.ba57d",
+        "name": "ReadFile",
+        "filename": "/data/timer-heizungspumpe.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "addea142.fda03"
+            ]
+        ]
+    },
+    {
+        "id": "a5b0b07b.1b3d8",
+        "type": "ui_switch",
+        "z": "b29fa04e.ba57d",
+        "name": "",
+        "label": "Heizungspumpe",
+        "tooltip": "",
+        "group": "8724bcdb.fa28b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "37fc007f.ec2eb",
+                "51fadafe.79ddd4",
+                "195176e7.3218d9"
+            ]
+        ]
+    },
+    {
+        "id": "addea142.fda03",
+        "type": "ui_time_scheduler",
+        "z": "b29fa04e.ba57d",
+        "group": "8724bcdb.fa28b",
+        "name": "",
+        "startDay": "0",
+        "refresh": 60,
+        "devices": [
+            "Heizungspumpe"
+        ],
+        "onlySendChange": false,
+        "customPayload": false,
+        "eventMode": false,
+        "eventOptions": [],
+        "sendTopic": false,
+        "lat": "",
+        "lon": "",
+        "outputs": 2,
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "85e60440.856fa8"
+            ],
+            [
+                "a5b0b07b.1b3d8"
+            ]
+        ]
+    },
+    {
+        "id": "37fc007f.ec2eb",
+        "type": "debug",
+        "z": "b29fa04e.ba57d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 220,
+        "wires": []
     }
 ]
