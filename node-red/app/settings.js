@@ -78,7 +78,9 @@ module.exports = {
     httpStatic: '/usr/src/app/assets/',
 
     contextStorage: {
-    	default    : { module: "localfilesystem"}
+        default: "memoryOnly",
+        memoryOnly: { module: 'memory' },
+        file: { module: 'localfilesystem' }
     },
 
     // Securing Node-RED
