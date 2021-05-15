@@ -13,8 +13,10 @@ services:
     privileged: true
     labels:
       io.balena.features.supervisor-api: '1'
+      io.balena.features.kernel-modules: '1'
     cap_add:
       - SYS_RAWIO
+      - SYS_MODULE
     devices:
       - "/dev/mem:/dev/mem"
       - "/dev/gpiomem:/dev/gpiomem"

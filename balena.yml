@@ -16,4 +16,5 @@ data:
     - USERNAME: "root"
     - PASSWORD: "$2b$08$HfqMX3mqHWEJsT5V3KrKWO90awQ2louAVDZ/zwyI.WSxfHpA331de"
     - TZ: "Europe/Berlin"
+    - RESIN_HOST_CONFIG_dtoverlay: 'w1-gpio,pullup="y"'
   defaultDeviceType: "raspberrypi3-64"
