@@ -59,13 +59,6 @@
         "info": ""
     },
     {
-        "id": "37e86829.abd148",
-        "type": "tab",
-        "label": "Persistent Test",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "b29fa04e.ba57d",
         "type": "tab",
         "label": "Zeitschaltuhr",
@@ -739,23 +732,10 @@
         "database": "heizopidb",
         "name": "internal influx database",
         "usetls": false,
-        "tls": "d50d0c9f.31e858",
+        "tls": "",
         "influxdbVersion": "1.x",
         "url": "http://influxdb:8086",
         "rejectUnauthorized": true
-    },
-    {
-        "id": "d50d0c9f.31e858",
-        "type": "tls-config",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "",
-        "keyname": "",
-        "caname": "",
-        "servername": "",
-        "verifyservercert": false
     },
     {
         "id": "a68c46f7.1bdfe8",
@@ -800,12 +780,6 @@
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard"
-    },
-    {
-        "id": "36d947d4.eacfd8",
-        "type": "persist-store",
-        "filename": "/data/HeizoPi/parameter.json",
-        "interval": "60"
     },
     {
         "id": "d3999d12.b64e2",
@@ -5466,7 +5440,8 @@
         "name": "LCD",
         "speed": "3",
         "size": "20x4",
-        "x": 730,
+        "address": "0x27",
+        "x": 670,
         "y": 480,
         "wires": []
     },
@@ -8345,104 +8320,6 @@
         "info": "",
         "x": 180,
         "y": 420,
-        "wires": []
-    },
-    {
-        "id": "41fdaced.da92e4",
-        "type": "persist out",
-        "z": "37e86829.abd148",
-        "name": "test",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 290,
-        "y": 160,
-        "wires": [
-            [
-                "51156b29.0c0a64"
-            ]
-        ]
-    },
-    {
-        "id": "f0d74c4.c4149b",
-        "type": "persist in",
-        "z": "37e86829.abd148",
-        "name": "test",
-        "storageNode": "36d947d4.eacfd8",
-        "x": 370,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "a78a5dd3.4dbaa",
-        "type": "inject",
-        "z": "37e86829.abd148",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "3456.34567",
-        "payloadType": "num",
-        "x": 220,
-        "y": 100,
-        "wires": [
-            [
-                "f0d74c4.c4149b"
-            ]
-        ]
-    },
-    {
-        "id": "62b1db95.0a9bf4",
-        "type": "inject",
-        "z": "37e86829.abd148",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 160,
-        "wires": [
-            [
-                "41fdaced.da92e4"
-            ]
-        ]
-    },
-    {
-        "id": "51156b29.0c0a64",
-        "type": "debug",
-        "z": "37e86829.abd148",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 160,
         "wires": []
     },
     {
