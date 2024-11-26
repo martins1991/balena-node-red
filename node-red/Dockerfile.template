@@ -23,7 +23,7 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
       node-red-contrib-moment \
       node-red-contrib-advanced-ping \
       node-red-contrib-influxdb \
-      npm install node-red-contrib-isonline \
+    && npm install node-red-contrib-isonline \
       node-red-contrib-ui-time-scheduler \
     && JOBS=MAX npm install --unsafe-perm --production && npm cache clean --force
 
@@ -46,7 +46,7 @@ WORKDIR /usr/src/app
 COPY --from=build /usr/local/bin /usr/local/bin
 COPY --from=build /usr/local/lib/node_modules /usr/local/lib/node_modules
 COPY --from=build /usr/src/app/node_modules /usr/src/app/node_modules
-COPY ./ssh_config /etc/ssh/ssh_config
+# COPY ./ssh_config /etc/ssh/ssh_config
 
 # This will copy all files in our root to the working  directory in the container
 COPY ./app ./
