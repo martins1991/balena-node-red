@@ -24,22 +24,6 @@ services:
     ports:
       - "1880:1880"
       - "502:502"
-  grafana:
-    restart: always
-    hostname: grafana
-    container_name: grafana
-    build: ./grafana
-    ports:
-      - "81:81"
-    volumes:
-      - 'influxdb-data:/data'
-    environment:
-        - 'HOME_DASHBOARD_UID=balenaSense'
-        - 'GF_PATHS_DATA=/data/grafana'
-        - 'GF_SERVER_HTTP_PORT=81'
-        - 'GF_SESSION_PROVIDER=memory'
-        - 'GF_AUTH_ANONYMOUS_ENABLED=true'
-        - 'GF_PATHS_PLUGINS=/var/lib/grafana'
   wifi-connect:
     build: ./wifi-connect
     restart: always
