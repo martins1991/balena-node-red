@@ -1,8 +1,0 @@
-FROM balenalib/raspberrypi3-alpine
-
-RUN apk add influxdb
-
-RUN mkdir /etc/influxdb
-COPY influxdb.conf /etc/influxdb/
-
-CMD ["influxd"]

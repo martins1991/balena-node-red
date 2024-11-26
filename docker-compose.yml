@@ -1,6 +1,5 @@
 version: '2'
 volumes:
-  influxdb-data:
   node-red-data:
 services:
   node-red:
@@ -25,15 +24,6 @@ services:
     ports:
       - "1880:1880"
       - "502:502"
-  influxdb:
-    restart: always
-    hostname: influxdb
-    container_name: influxdb
-    build: ./influxdb
-    volumes:
-      - 'influxdb-data:/data'
-    environment:
-        - 'INFLUXDB_DB=heizopidb'
   grafana:
     restart: always
     hostname: grafana
